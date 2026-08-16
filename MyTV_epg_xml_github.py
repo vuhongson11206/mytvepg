@@ -1577,27 +1577,19 @@ def build_programme_xml(
     )
 
     start = xmltv_datetime(
-        programme[
-            "start"
-        ]
+        programme["start"]
     )
 
     stop = xmltv_datetime(
-        programme[
-            "stop"
-        ]
+        programme["stop"]
     )
 
     title = xml_escape(
-        programme[
-            "title"
-        ]
+        programme["title"]
     )
 
     length = int(
-        programme[
-            "length"
-        ]
+        programme["length"]
     )
 
     description = clean_text(
@@ -1607,34 +1599,6 @@ def build_programme_xml(
         )
     )
 
-    # --------------------------------------------------------
-    # Yêu cầu:
-    #
-    # Chương trình này có thời lượng X phút
-    # --------------------------------------------------------
-
-    duration_text = (
-        f"Chương trình này có thời lượng "
-        f"{length} phút"
-    )
-
-    if description:
-
-        full_description = (
-            f"{description} "
-            f"{duration_text}"
-        )
-
-    else:
-
-        full_description = (
-            duration_text
-        )
-
-    full_description = xml_escape(
-        full_description
-    )
-
     lines.append(
         f'  <programme '
         f'start="{start}" '
@@ -1642,17 +1606,40 @@ def build_programme_xml(
         f'channel="{channel}">'
     )
 
+    # --------------------------------------------------------
+    # TITLE
+    # --------------------------------------------------------
+
     lines.append(
         f'    <title lang="vi">'
         f'{title}'
         f'</title>'
     )
 
-    lines.append(
-        f'    <desc lang="vi">'
-        f'{full_description}'
-        f'</desc>'
-    )
+    # --------------------------------------------------------
+    # DESCRIPTION
+    #
+    # Chỉ tạo <desc> nếu API thực sự có nội dung.
+    # Không đưa thông tin duration vào desc.
+    # --------------------------------------------------------
+
+    if description:
+
+        description = xml_escape(
+            description
+        )
+
+        lines.append(
+            f'    <desc lang="vi">'
+            f'{description}'
+            f'</desc>'
+        )
+
+    # --------------------------------------------------------
+    # LENGTH
+    #
+    # Luôn ghi duration ở đây.
+    # --------------------------------------------------------
 
     lines.append(
         f'    <length lang="vi">'
@@ -1662,7 +1649,7 @@ def build_programme_xml(
     )
 
     lines.append(
-        "  </programme>"
+        '  </programme>'
     )
 
     return lines
@@ -1774,9 +1761,9 @@ def create_epg(
 
     xml_lines.append(
         '<tv '
-        'source-info-name="MyTV" '
-        'source-info-url="https://mytv.com.vn" '
-        'generator-info-name="MyTV EPG GitHub"'
+        'source-info-name="Ngân Phúc" '
+        'source-info-url="https://epg.vercel.app/epg.xml" '
+        'generator-info-name="EPG GitHub"'
         '>'
     )
 
