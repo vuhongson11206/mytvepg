@@ -51,7 +51,7 @@ jobs:
 
       - name: Generate EPG XML
         run: |
-          python MyTV_epg_xml.py
+          python MyTV_epg_xml_github.py
 
       # ------------------------------------------------------
       # Check output
