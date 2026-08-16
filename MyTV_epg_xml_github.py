@@ -1317,7 +1317,7 @@ def create_epg_xml(
                 xml_lines.append(
                     f'    <length '
                     f'lang="vi">'
-                    f'{length}'
+                    f'{Chương trình này có thời lượng {length} phút}'
                     f'</length>'
                 )
 
