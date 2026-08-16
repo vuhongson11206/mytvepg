@@ -31446,15 +31446,10 @@
     <desc lang="vi">Chương trình này có thời lượng 10 phút</desc>
     <length lang="vi">Chương trình này có thời lượng 10 phút</length>
   </programme>
-  <programme start="20260817201000 +0700" stop="20260817203500 +0700" channel="antvhd">
-    <title lang="vi">Xây dựng Đảng 20 - Lực lượng CAND tiên phong gương mẫu đi đầu</title>
-    <desc lang="vi">Chương trình này có thời lượng 25 phút</desc>
-    <length lang="vi">Chương trình này có thời lượng 25 phút</length>
-  </programme>
-  <programme start="20260817203500 +0700" stop="20260817204500 +0700" channel="antvhd">
-    <title lang="vi">Nhân vật sự kiện 10 - Người giữ ký ức an ninh</title>
-    <desc lang="vi">Chương trình này có thời lượng 10 phút</desc>
-    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  <programme start="20260817201000 +0700" stop="20260817204500 +0700" channel="antvhd">
+    <title lang="vi">Xây dựng Đảng 20 - Người truyền lửa nghị quyết</title>
+    <desc lang="vi">Chương trình này có thời lượng 35 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 35 phút</length>
   </programme>
   <programme start="20260817204500 +0700" stop="20260817211000 +0700" channel="antvhd">
     <title lang="vi">Khát vọng vươn mình - Khát vọng đô thị thông minh vùng lõi miền Tây</title>
@@ -31462,7 +31457,7 @@
     <length lang="vi">Chương trình này có thời lượng 25 phút</length>
   </programme>
   <programme start="20260817211000 +0700" stop="20260817220500 +0700" channel="antvhd">
-    <title lang="vi">Phim truyện 21h10 - Nằm vùng trở về - Tập 26/43</title>
+    <title lang="vi">Phim truyện - Nằm vùng trở về - Tập 26</title>
     <desc lang="vi">Chương trình này có thời lượng 55 phút</desc>
     <length lang="vi">Chương trình này có thời lượng 55 phút</length>
   </programme>
@@ -40321,6 +40316,221 @@
     <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
     <length lang="vi">Chương trình này có thời lượng 30 phút</length>
   </programme>
+  <programme start="20260817000000 +0700" stop="20260817004000 +0700" channel="htv7hd">
+    <title lang="vi">Anh trai và cái đuôi nhỏ</title>
+    <desc lang="vi">Chương trình này có thời lượng 40 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 40 phút</length>
+  </programme>
+  <programme start="20260817004000 +0700" stop="20260817013000 +0700" channel="htv7hd">
+    <title lang="vi">Siêu bếp</title>
+    <desc lang="vi">Chương trình này có thời lượng 50 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
+  </programme>
+  <programme start="20260817013000 +0700" stop="20260817021500 +0700" channel="htv7hd">
+    <title lang="vi">Phim truyện Việt Nam: Cổng mặt trời</title>
+    <desc lang="vi">Chương trình này có thời lượng 45 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260817021500 +0700" stop="20260817023000 +0700" channel="htv7hd">
+    <title lang="vi">Nghệ thuật &amp; cuộc sống</title>
+    <desc lang="vi">Chương trình này có thời lượng 15 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260817023000 +0700" stop="20260817031500 +0700" channel="htv7hd">
+    <title lang="vi">Phim truyện Việt Nam: Lối sống sai lầm</title>
+    <desc lang="vi">Chương trình này có thời lượng 45 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260817031500 +0700" stop="20260817034000 +0700" channel="htv7hd">
+    <title lang="vi">Dây tơ hồng</title>
+    <desc lang="vi">Chương trình này có thời lượng 25 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 25 phút</length>
+  </programme>
+  <programme start="20260817034000 +0700" stop="20260817050200 +0700" channel="htv7hd">
+    <title lang="vi">Bản lĩnh đối mặt</title>
+    <desc lang="vi">Chương trình này có thời lượng 82 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 82 phút</length>
+  </programme>
+  <programme start="20260817050200 +0700" stop="20260817052500 +0700" channel="htv7hd">
+    <title lang="vi">Thể dục Aerobic</title>
+    <desc lang="vi">Chương trình này có thời lượng 23 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 23 phút</length>
+  </programme>
+  <programme start="20260817052500 +0700" stop="20260817055500 +0700" channel="htv7hd">
+    <title lang="vi">Tạp chí thể thao</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817055500 +0700" stop="20260817063000 +0700" channel="htv7hd">
+    <title lang="vi">Sitcom: Gia đình là số 1</title>
+    <desc lang="vi">Chương trình này có thời lượng 35 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 35 phút</length>
+  </programme>
+  <programme start="20260817063000 +0700" stop="20260817070000 +0700" channel="htv7hd">
+    <title lang="vi">Chương trình 60 giây</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817070000 +0700" stop="20260817071500 +0700" channel="htv7hd">
+    <title lang="vi">Bác sĩ của bạn</title>
+    <desc lang="vi">Chương trình này có thời lượng 15 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260817071500 +0700" stop="20260817072000 +0700" channel="htv7hd">
+    <title lang="vi">Đi khắp Việt Nam</title>
+    <desc lang="vi">Chương trình này có thời lượng 5 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260817072000 +0700" stop="20260817081500 +0700" channel="htv7hd">
+    <title lang="vi">Tranh tài đọ sức</title>
+    <desc lang="vi">Chương trình này có thời lượng 55 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 55 phút</length>
+  </programme>
+  <programme start="20260817081500 +0700" stop="20260817083000 +0700" channel="htv7hd">
+    <title lang="vi">Thành phố của tôi - Khi màn ảnh không chỉ ở rạp</title>
+    <desc lang="vi">Chương trình này có thời lượng 15 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260817083000 +0700" stop="20260817090000 +0700" channel="htv7hd">
+    <title lang="vi">Thể thao là cuộc sống</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817090000 +0700" stop="20260817094500 +0700" channel="htv7hd">
+    <title lang="vi">Kilowatt - Gia đình chung tay sử dụng điện an toàn, tiết kiệm</title>
+    <desc lang="vi">Chương trình này có thời lượng 45 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260817094500 +0700" stop="20260817100000 +0700" channel="htv7hd">
+    <title lang="vi">Phim Sitcom: Nhật ký vợ chồng son</title>
+    <desc lang="vi">Chương trình này có thời lượng 15 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260817100000 +0700" stop="20260817101500 +0700" channel="htv7hd">
+    <title lang="vi">Tạp chí Khoa học sáng tạo - NQ 57 - Phần 2 - Kích hoạt sức mạnh kết nối</title>
+    <desc lang="vi">Chương trình này có thời lượng 15 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260817101500 +0700" stop="20260817104500 +0700" channel="htv7hd">
+    <title lang="vi">Quán quen chuyện chất</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817104500 +0700" stop="20260817110000 +0700" channel="htv7hd">
+    <title lang="vi">Dấu ấn thương hiệu Việt</title>
+    <desc lang="vi">Chương trình này có thời lượng 15 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260817110000 +0700" stop="20260817115000 +0700" channel="htv7hd">
+    <title lang="vi">Phim truyện Singapore: Sứ mệnh vẫy gọi</title>
+    <desc lang="vi">Chương trình này có thời lượng 50 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
+  </programme>
+  <programme start="20260817115000 +0700" stop="20260817120000 +0700" channel="htv7hd">
+    <title lang="vi">Món ngon mỗi ngày</title>
+    <desc lang="vi">Chương trình này có thời lượng 10 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260817120000 +0700" stop="20260817123000 +0700" channel="htv7hd">
+    <title lang="vi">Chương trình 60 giây</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817123000 +0700" stop="20260817130000 +0700" channel="htv7hd">
+    <title lang="vi">Phim truyện Trung Quốc: May mắn cũng là một nghề</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817130000 +0700" stop="20260817134500 +0700" channel="htv7hd">
+    <title lang="vi">Phim truyện Hàn Quốc: Giai thoại phu nhân Ok</title>
+    <desc lang="vi">Chương trình này có thời lượng 45 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260817134500 +0700" stop="20260817135000 +0700" channel="htv7hd">
+    <title lang="vi">Thị trường 365</title>
+    <desc lang="vi">Chương trình này có thời lượng 5 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260817135000 +0700" stop="20260817150000 +0700" channel="htv7hd">
+    <title lang="vi">Chuyện bốn mùa - Cam làm quýt chịu</title>
+    <desc lang="vi">Chương trình này có thời lượng 70 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 70 phút</length>
+  </programme>
+  <programme start="20260817150000 +0700" stop="20260817151500 +0700" channel="htv7hd">
+    <title lang="vi">A Bạn đây rồi - Em yêu Tổ quốc Việt Nam</title>
+    <desc lang="vi">Chương trình này có thời lượng 15 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260817151500 +0700" stop="20260817164500 +0700" channel="htv7hd">
+    <title lang="vi">Say Hi rực rỡ</title>
+    <desc lang="vi">Chương trình này có thời lượng 90 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 90 phút</length>
+  </programme>
+  <programme start="20260817164500 +0700" stop="20260817173000 +0700" channel="htv7hd">
+    <title lang="vi">Phim truyện Trung Quốc: Lưu thủy điều điều</title>
+    <desc lang="vi">Chương trình này có thời lượng 45 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260817173000 +0700" stop="20260817174500 +0700" channel="htv7hd">
+    <title lang="vi">Sức khỏe 24 giờ</title>
+    <desc lang="vi">Chương trình này có thời lượng 15 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260817174500 +0700" stop="20260817183000 +0700" channel="htv7hd">
+    <title lang="vi">Phim truyện Việt Nam: Ngọn cỏ gió đùa</title>
+    <desc lang="vi">Chương trình này có thời lượng 45 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260817183000 +0700" stop="20260817190000 +0700" channel="htv7hd">
+    <title lang="vi">Chương trình 60 giây</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817190000 +0700" stop="20260817193000 +0700" channel="htv7hd">
+    <title lang="vi">Trò chuyện với tương lai</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817193000 +0700" stop="20260817200000 +0700" channel="htv7hd">
+    <title lang="vi">Phim Việt đặc sắc: Yêu em như ngày đầu tiên</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817200000 +0700" stop="20260817203000 +0700" channel="htv7hd">
+    <title lang="vi">Nét Việt</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817203000 +0700" stop="20260817210000 +0700" channel="htv7hd">
+    <title lang="vi">Vợ chồng son</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817210000 +0700" stop="20260817215000 +0700" channel="htv7hd">
+    <title lang="vi">Phim truyện Hồng Kông: Rừng vàng</title>
+    <desc lang="vi">Chương trình này có thời lượng 50 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
+  </programme>
+  <programme start="20260817215000 +0700" stop="20260817222000 +0700" channel="htv7hd">
+    <title lang="vi">Phim truyện Trung Quốc: Kính song thành</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817222000 +0700" stop="20260817232000 +0700" channel="htv7hd">
+    <title lang="vi">Hai mùa mưa nắng - Con không sai</title>
+    <desc lang="vi">Chương trình này có thời lượng 60 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 60 phút</length>
+  </programme>
+  <programme start="20260817232000 +0700" stop="20260817234500 +0700" channel="htv7hd">
+    <title lang="vi">Muôn màu thể thao</title>
+    <desc lang="vi">Chương trình này có thời lượng 25 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 25 phút</length>
+  </programme>
+  <programme start="20260817234500 +0700" stop="20260818001500 +0700" channel="htv7hd">
+    <title lang="vi">Đi để khỏe</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
   <programme start="20260817000000 +0700" stop="20260817013000 +0700" channel="htv9hd">
     <title lang="vi">Câu lạc bộ thể thao</title>
     <desc lang="vi">Chương trình này có thời lượng 90 phút</desc>
@@ -43203,6 +43413,211 @@
   </programme>
   <programme start="20260817234000 +0700" stop="20260818001000 +0700" channel="laocai">
     <title lang="vi">Giới thiệu chương trình ngày mai.</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817001000 +0700" stop="20260817003900 +0700" channel="musicbox">
+    <title lang="vi">Rock</title>
+    <desc lang="vi">Chương trình này có thời lượng 29 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 29 phút</length>
+  </programme>
+  <programme start="20260817003900 +0700" stop="20260817011100 +0700" channel="musicbox">
+    <title lang="vi">Latino</title>
+    <desc lang="vi">Chương trình này có thời lượng 32 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 32 phút</length>
+  </programme>
+  <programme start="20260817011100 +0700" stop="20260817014400 +0700" channel="musicbox">
+    <title lang="vi">Balkan</title>
+    <desc lang="vi">Chương trình này có thời lượng 33 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 33 phút</length>
+  </programme>
+  <programme start="20260817014400 +0700" stop="20260817021400 +0700" channel="musicbox">
+    <title lang="vi">Kpop</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817021400 +0700" stop="20260817024700 +0700" channel="musicbox">
+    <title lang="vi">Pop hits</title>
+    <desc lang="vi">Chương trình này có thời lượng 33 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 33 phút</length>
+  </programme>
+  <programme start="20260817024700 +0700" stop="20260817041800 +0700" channel="musicbox">
+    <title lang="vi">Only music</title>
+    <desc lang="vi">Chương trình này có thời lượng 91 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 91 phút</length>
+  </programme>
+  <programme start="20260817041800 +0700" stop="20260817042300 +0700" channel="musicbox">
+    <title lang="vi">Hot this week</title>
+    <desc lang="vi">Chương trình này có thời lượng 5 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260817042300 +0700" stop="20260817045400 +0700" channel="musicbox">
+    <title lang="vi">R&amp;amp;b</title>
+    <desc lang="vi">Chương trình này có thời lượng 31 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 31 phút</length>
+  </programme>
+  <programme start="20260817045400 +0700" stop="20260817052600 +0700" channel="musicbox">
+    <title lang="vi">Rock</title>
+    <desc lang="vi">Chương trình này có thời lượng 32 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 32 phút</length>
+  </programme>
+  <programme start="20260817052600 +0700" stop="20260817055500 +0700" channel="musicbox">
+    <title lang="vi">Mb hits</title>
+    <desc lang="vi">Chương trình này có thời lượng 29 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 29 phút</length>
+  </programme>
+  <programme start="20260817055500 +0700" stop="20260817062500 +0700" channel="musicbox">
+    <title lang="vi">Hip hop</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817062500 +0700" stop="20260817065800 +0700" channel="musicbox">
+    <title lang="vi">Edm</title>
+    <desc lang="vi">Chương trình này có thời lượng 33 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 33 phút</length>
+  </programme>
+  <programme start="20260817065800 +0700" stop="20260817072900 +0700" channel="musicbox">
+    <title lang="vi">Gigs</title>
+    <desc lang="vi">Chương trình này có thời lượng 31 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 31 phút</length>
+  </programme>
+  <programme start="20260817072900 +0700" stop="20260817080000 +0700" channel="musicbox">
+    <title lang="vi">Pop hits</title>
+    <desc lang="vi">Chương trình này có thời lượng 31 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 31 phút</length>
+  </programme>
+  <programme start="20260817080000 +0700" stop="20260817093200 +0700" channel="musicbox">
+    <title lang="vi">Only music</title>
+    <desc lang="vi">Chương trình này có thời lượng 92 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 92 phút</length>
+  </programme>
+  <programme start="20260817093200 +0700" stop="20260817100500 +0700" channel="musicbox">
+    <title lang="vi">Rock</title>
+    <desc lang="vi">Chương trình này có thời lượng 33 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 33 phút</length>
+  </programme>
+  <programme start="20260817100500 +0700" stop="20260817103600 +0700" channel="musicbox">
+    <title lang="vi">Mb hits</title>
+    <desc lang="vi">Chương trình này có thời lượng 31 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 31 phút</length>
+  </programme>
+  <programme start="20260817103600 +0700" stop="20260817110500 +0700" channel="musicbox">
+    <title lang="vi">Edm</title>
+    <desc lang="vi">Chương trình này có thời lượng 29 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 29 phút</length>
+  </programme>
+  <programme start="20260817110500 +0700" stop="20260817113800 +0700" channel="musicbox">
+    <title lang="vi">Kpop</title>
+    <desc lang="vi">Chương trình này có thời lượng 33 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 33 phút</length>
+  </programme>
+  <programme start="20260817113800 +0700" stop="20260817120900 +0700" channel="musicbox">
+    <title lang="vi">Hot this week</title>
+    <desc lang="vi">Chương trình này có thời lượng 31 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 31 phút</length>
+  </programme>
+  <programme start="20260817120900 +0700" stop="20260817123800 +0700" channel="musicbox">
+    <title lang="vi">Latino</title>
+    <desc lang="vi">Chương trình này có thời lượng 29 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 29 phút</length>
+  </programme>
+  <programme start="20260817123800 +0700" stop="20260817131200 +0700" channel="musicbox">
+    <title lang="vi">Pop hits</title>
+    <desc lang="vi">Chương trình này có thời lượng 34 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 34 phút</length>
+  </programme>
+  <programme start="20260817131200 +0700" stop="20260817134200 +0700" channel="musicbox">
+    <title lang="vi">Europe</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817134200 +0700" stop="20260817141200 +0700" channel="musicbox">
+    <title lang="vi">Hip hop</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817141200 +0700" stop="20260817144700 +0700" channel="musicbox">
+    <title lang="vi">Let\&#x27;s dance</title>
+    <desc lang="vi">Chương trình này có thời lượng 35 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 35 phút</length>
+  </programme>
+  <programme start="20260817144700 +0700" stop="20260817151800 +0700" channel="musicbox">
+    <title lang="vi">R&amp;amp;b</title>
+    <desc lang="vi">Chương trình này có thời lượng 31 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 31 phút</length>
+  </programme>
+  <programme start="20260817151800 +0700" stop="20260817154800 +0700" channel="musicbox">
+    <title lang="vi">Balkan</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817154800 +0700" stop="20260817162200 +0700" channel="musicbox">
+    <title lang="vi">Pop hits</title>
+    <desc lang="vi">Chương trình này có thời lượng 34 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 34 phút</length>
+  </programme>
+  <programme start="20260817162200 +0700" stop="20260817165100 +0700" channel="musicbox">
+    <title lang="vi">Mb hits</title>
+    <desc lang="vi">Chương trình này có thời lượng 29 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 29 phút</length>
+  </programme>
+  <programme start="20260817165100 +0700" stop="20260817172100 +0700" channel="musicbox">
+    <title lang="vi">Kpop</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817172100 +0700" stop="20260817175500 +0700" channel="musicbox">
+    <title lang="vi">Latino</title>
+    <desc lang="vi">Chương trình này có thời lượng 34 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 34 phút</length>
+  </programme>
+  <programme start="20260817175500 +0700" stop="20260817182600 +0700" channel="musicbox">
+    <title lang="vi">Hot this week</title>
+    <desc lang="vi">Chương trình này có thời lượng 31 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 31 phút</length>
+  </programme>
+  <programme start="20260817182600 +0700" stop="20260817185600 +0700" channel="musicbox">
+    <title lang="vi">Gigs</title>
+    <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260817185600 +0700" stop="20260817193000 +0700" channel="musicbox">
+    <title lang="vi">Kpop</title>
+    <desc lang="vi">Chương trình này có thời lượng 34 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 34 phút</length>
+  </programme>
+  <programme start="20260817193000 +0700" stop="20260817200100 +0700" channel="musicbox">
+    <title lang="vi">Europe</title>
+    <desc lang="vi">Chương trình này có thời lượng 31 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 31 phút</length>
+  </programme>
+  <programme start="20260817200100 +0700" stop="20260817203300 +0700" channel="musicbox">
+    <title lang="vi">Let\&#x27;s dance</title>
+    <desc lang="vi">Chương trình này có thời lượng 32 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 32 phút</length>
+  </programme>
+  <programme start="20260817203300 +0700" stop="20260817220500 +0700" channel="musicbox">
+    <title lang="vi">Only music</title>
+    <desc lang="vi">Chương trình này có thời lượng 92 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 92 phút</length>
+  </programme>
+  <programme start="20260817220500 +0700" stop="20260817224000 +0700" channel="musicbox">
+    <title lang="vi">Country</title>
+    <desc lang="vi">Chương trình này có thời lượng 35 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 35 phút</length>
+  </programme>
+  <programme start="20260817224000 +0700" stop="20260817231100 +0700" channel="musicbox">
+    <title lang="vi">Mb hits</title>
+    <desc lang="vi">Chương trình này có thời lượng 31 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 31 phút</length>
+  </programme>
+  <programme start="20260817231100 +0700" stop="20260817234300 +0700" channel="musicbox">
+    <title lang="vi">Rock</title>
+    <desc lang="vi">Chương trình này có thời lượng 32 phút</desc>
+    <length lang="vi">Chương trình này có thời lượng 32 phút</length>
+  </programme>
+  <programme start="20260817234300 +0700" stop="20260818001300 +0700" channel="musicbox">
+    <title lang="vi">Latino</title>
     <desc lang="vi">Chương trình này có thời lượng 30 phút</desc>
     <length lang="vi">Chương trình này có thời lượng 30 phút</length>
   </programme>
