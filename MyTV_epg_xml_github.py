@@ -1114,7 +1114,7 @@ def create_epg_xml(
         f'<tv '
         f'date="{now.strftime("%d-%m-%Y")}" '
         f'source-info-name="Ngan Phuc" '
-        f'generator-info-name="MyTV EPG GitHub"'
+        f'generator-info-name="EPG GitHub"'
         f'>'
     )
 
@@ -1317,7 +1317,7 @@ def create_epg_xml(
                 xml_lines.append(
                     f'    <length '
                     f'lang="vi">'
-                    f'{Chương trình này có thời lượng {length} phút}'
+                    f'Chương trình này có thời lượng {length} phút'
                     f'</length>'
                 )
 
