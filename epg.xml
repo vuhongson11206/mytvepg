@@ -9389,7 +9389,7 @@
     <length lang="vi">Chương trình này có thời lượng 53 phút</length>
   </programme>
   <programme start="20260821081100 +0700" stop="20260821085000 +0700" channel="htvccanhachd">
-    <title lang="vi">Ca nhạc: Thành phố tình ca 16 - Tay tôi đây khi cần thì nắm lấy</title>
+    <title lang="vi">Ca nhạc: Thành phố tình ca - Tay tôi đây khi cần thì nắm lấy</title>
     <length lang="vi">Chương trình này có thời lượng 39 phút</length>
   </programme>
   <programme start="20260821085000 +0700" stop="20260821092900 +0700" channel="htvccanhachd">
@@ -9421,7 +9421,7 @@
     <length lang="vi">Chương trình này có thời lượng 62 phút</length>
   </programme>
   <programme start="20260821140600 +0700" stop="20260821145900 +0700" channel="htvccanhachd">
-    <title lang="vi">Giải trí: Tập 10 Hương vị cuộc sống</title>
+    <title lang="vi">Giải trí: Biển của hy vọng - Tập 10 Hương vị cuộc sống</title>
     <length lang="vi">Chương trình này có thời lượng 53 phút</length>
   </programme>
   <programme start="20260821145900 +0700" stop="20260821161300 +0700" channel="htvccanhachd">
@@ -9433,7 +9433,7 @@
     <length lang="vi">Chương trình này có thời lượng 53 phút</length>
   </programme>
   <programme start="20260821170600 +0700" stop="20260821174400 +0700" channel="htvccanhachd">
-    <title lang="vi">Ca nhạc: Thành phố tình ca 16 - Tay tôi đây khi cần thì nắm lấy</title>
+    <title lang="vi">Ca nhạc: Thành phố tình ca - Tay tôi đây khi cần thì nắm lấy</title>
     <length lang="vi">Chương trình này có thời lượng 38 phút</length>
   </programme>
   <programme start="20260821174400 +0700" stop="20260821182400 +0700" channel="htvccanhachd">
@@ -9465,7 +9465,7 @@
     <length lang="vi">Chương trình này có thời lượng 62 phút</length>
   </programme>
   <programme start="20260821230000 +0700" stop="20260821235400 +0700" channel="htvccanhachd">
-    <title lang="vi">Giải trí: Tập 10 Hương vị cuộc sống</title>
+    <title lang="vi">Giải trí: Biển của hy vọng - Tập 10 Hương vị cuộc sống</title>
     <length lang="vi">Chương trình này có thời lượng 54 phút</length>
   </programme>
   <programme start="20260821235400 +0700" stop="20260822002400 +0700" channel="htvccanhachd">
@@ -23789,7 +23789,7 @@
     <length lang="vi">Chương trình này có thời lượng 30 phút</length>
   </programme>
   <programme start="20260821000000 +0700" stop="20260821000400 +0700" channel="vtv3hd">
-    <title lang="vi">Tiếp tục chương trình</title>
+    <title lang="vi">Hiểu sâu - sống chất: Sức hút cà phê Việt</title>
     <length lang="vi">Chương trình này có thời lượng 4 phút</length>
   </programme>
   <programme start="20260821000400 +0700" stop="20260821010000 +0700" channel="vtv3hd">
@@ -23828,29 +23828,29 @@
     <title lang="vi">Hiểu sâu - Sống chất: Khi mâu thuẫn vượt ngưỡng</title>
     <length lang="vi">Chương trình này có thời lượng 30 phút</length>
   </programme>
-  <programme start="20260821063000 +0700" stop="20260821070000 +0700" channel="vtv3hd">
+  <programme start="20260821063000 +0700" stop="20260821065900 +0700" channel="vtv3hd">
     <title lang="vi">Cà phê sáng</title>
-    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 29 phút</length>
   </programme>
-  <programme start="20260821070000 +0700" stop="20260821071000 +0700" channel="vtv3hd">
+  <programme start="20260821065900 +0700" stop="20260821070400 +0700" channel="vtv3hd">
     <title lang="vi">Việc tử tế</title>
-    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
   </programme>
-  <programme start="20260821071000 +0700" stop="20260821071500 +0700" channel="vtv3hd">
+  <programme start="20260821070400 +0700" stop="20260821071300 +0700" channel="vtv3hd">
     <title lang="vi">Cha con vạn dặm: Trải nghiệm đi chợ làng chài</title>
-    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 9 phút</length>
   </programme>
-  <programme start="20260821071500 +0700" stop="20260821072000 +0700" channel="vtv3hd">
+  <programme start="20260821071300 +0700" stop="20260821072100 +0700" channel="vtv3hd">
     <title lang="vi">Nét ẩm thực Việt</title>
-    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 8 phút</length>
   </programme>
-  <programme start="20260821072000 +0700" stop="20260821072500 +0700" channel="vtv3hd">
+  <programme start="20260821072100 +0700" stop="20260821072700 +0700" channel="vtv3hd">
     <title lang="vi">Sao 24h</title>
-    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 6 phút</length>
   </programme>
-  <programme start="20260821072500 +0700" stop="20260821073500 +0700" channel="vtv3hd">
+  <programme start="20260821072700 +0700" stop="20260821073500 +0700" channel="vtv3hd">
     <title lang="vi">Quà tặng cuộc sống: Cái giá của sự chủ quan</title>
-    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 8 phút</length>
   </programme>
   <programme start="20260821073500 +0700" stop="20260821074500 +0700" channel="vtv3hd">
     <title lang="vi">Việt Nam đa sắc</title>
@@ -23864,65 +23864,65 @@
     <title lang="vi">Thời tiết</title>
     <length lang="vi">Chương trình này có thời lượng 6 phút</length>
   </programme>
-  <programme start="20260821080000 +0700" stop="20260821081000 +0700" channel="vtv3hd">
+  <programme start="20260821080000 +0700" stop="20260821081200 +0700" channel="vtv3hd">
     <title lang="vi">Con đến đây</title>
-    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 12 phút</length>
   </programme>
-  <programme start="20260821081000 +0700" stop="20260821082000 +0700" channel="vtv3hd">
+  <programme start="20260821081200 +0700" stop="20260821081900 +0700" channel="vtv3hd">
     <title lang="vi">Thuế và đời sống</title>
-    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 7 phút</length>
   </programme>
-  <programme start="20260821082000 +0700" stop="20260821091000 +0700" channel="vtv3hd">
+  <programme start="20260821081900 +0700" stop="20260821090900 +0700" channel="vtv3hd">
     <title lang="vi">Phim truyện: Tương lai rộng mở - Tập 17</title>
     <length lang="vi">Chương trình này có thời lượng 50 phút</length>
   </programme>
-  <programme start="20260821091000 +0700" stop="20260821100000 +0700" channel="vtv3hd">
-    <title lang="vi">KHÁCH SẠN 5 SAO</title>
-    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
+  <programme start="20260821090900 +0700" stop="20260821100000 +0700" channel="vtv3hd">
+    <title lang="vi">Khách sạn 5 sao</title>
+    <length lang="vi">Chương trình này có thời lượng 51 phút</length>
   </programme>
-  <programme start="20260821100000 +0700" stop="20260821103500 +0700" channel="vtv3hd">
+  <programme start="20260821100000 +0700" stop="20260821103400 +0700" channel="vtv3hd">
     <title lang="vi">Chuyện nhà thời nay</title>
-    <length lang="vi">Chương trình này có thời lượng 35 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 34 phút</length>
   </programme>
-  <programme start="20260821103500 +0700" stop="20260821104000 +0700" channel="vtv3hd">
+  <programme start="20260821103400 +0700" stop="20260821103900 +0700" channel="vtv3hd">
     <title lang="vi">Việc tử tế</title>
     <length lang="vi">Chương trình này có thời lượng 5 phút</length>
   </programme>
-  <programme start="20260821104000 +0700" stop="20260821111000 +0700" channel="vtv3hd">
+  <programme start="20260821103900 +0700" stop="20260821111000 +0700" channel="vtv3hd">
     <title lang="vi">Sao check: Ca sĩ ST Sơn Thạch</title>
-    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 31 phút</length>
   </programme>
-  <programme start="20260821111000 +0700" stop="20260821111500 +0700" channel="vtv3hd">
+  <programme start="20260821111000 +0700" stop="20260821111400 +0700" channel="vtv3hd">
     <title lang="vi">Thông tin 260</title>
-    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 4 phút</length>
   </programme>
-  <programme start="20260821111500 +0700" stop="20260821113000 +0700" channel="vtv3hd">
+  <programme start="20260821111400 +0700" stop="20260821113000 +0700" channel="vtv3hd">
     <title lang="vi">Điều nhỏ bé kỳ diệu</title>
-    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 16 phút</length>
   </programme>
-  <programme start="20260821113000 +0700" stop="20260821114500 +0700" channel="vtv3hd">
+  <programme start="20260821113000 +0700" stop="20260821115000 +0700" channel="vtv3hd">
     <title lang="vi">Gì thế nhỉ</title>
-    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
   </programme>
-  <programme start="20260821114500 +0700" stop="20260821120000 +0700" channel="vtv3hd">
+  <programme start="20260821115000 +0700" stop="20260821120000 +0700" channel="vtv3hd">
     <title lang="vi">Phụ nữ là số 1: Kẻ điên tình - Tập 9</title>
-    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
-  </programme>
-  <programme start="20260821120000 +0700" stop="20260821125000 +0700" channel="vtv3hd">
-    <title lang="vi">Phim truyện: Đi tìm hạnh phúc - Tập 19</title>
-    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
-  </programme>
-  <programme start="20260821125000 +0700" stop="20260821130000 +0700" channel="vtv3hd">
-    <title lang="vi">Việt Nam đa sắc</title>
     <length lang="vi">Chương trình này có thời lượng 10 phút</length>
   </programme>
-  <programme start="20260821130000 +0700" stop="20260821135000 +0700" channel="vtv3hd">
-    <title lang="vi">Phim truyện: Tương lai rộng mở - Tập 18</title>
-    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
+  <programme start="20260821120000 +0700" stop="20260821125100 +0700" channel="vtv3hd">
+    <title lang="vi">Phim truyện: Đi tìm hạnh phúc - Tập 19</title>
+    <length lang="vi">Chương trình này có thời lượng 51 phút</length>
   </programme>
-  <programme start="20260821135000 +0700" stop="20260821143000 +0700" channel="vtv3hd">
+  <programme start="20260821125100 +0700" stop="20260821125900 +0700" channel="vtv3hd">
+    <title lang="vi">Việt Nam đa sắc</title>
+    <length lang="vi">Chương trình này có thời lượng 8 phút</length>
+  </programme>
+  <programme start="20260821125900 +0700" stop="20260821134400 +0700" channel="vtv3hd">
+    <title lang="vi">Phim truyện: Tương lai rộng mở - Tập 18</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260821134400 +0700" stop="20260821143000 +0700" channel="vtv3hd">
     <title lang="vi">Nhanh tay lẹ trí</title>
-    <length lang="vi">Chương trình này có thời lượng 40 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 46 phút</length>
   </programme>
   <programme start="20260821143000 +0700" stop="20260821152000 +0700" channel="vtv3hd">
     <title lang="vi">Đường lên đỉnh Olympia</title>
@@ -23981,7 +23981,7 @@
     <length lang="vi">Chương trình này có thời lượng 5 phút</length>
   </programme>
   <programme start="20260821200000 +0700" stop="20260821205000 +0700" channel="vtv3hd">
-    <title lang="vi">Phim truyện 20h00: Lửa trắng - Tập 20</title>
+    <title lang="vi">Phim truyện: Lửa trắng - Tập 20</title>
     <length lang="vi">Chương trình này có thời lượng 50 phút</length>
   </programme>
   <programme start="20260821205000 +0700" stop="20260821210000 +0700" channel="vtv3hd">
@@ -26568,6 +26568,218 @@
     <title lang="vi">BAD DOG! (S2): THÚ HƯ!</title>
     <length lang="vi">Chương trình này có thời lượng 30 phút</length>
   </programme>
+  <programme start="20260822000000 +0700" stop="20260822005500 +0700" channel="antvhd">
+    <title lang="vi">Phim truyện: Lương duyên ngang trái - Tập 6/26</title>
+    <length lang="vi">Chương trình này có thời lượng 55 phút</length>
+  </programme>
+  <programme start="20260822005500 +0700" stop="20260822010000 +0700" channel="antvhd">
+    <title lang="vi">Lệnh truy nã</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822010000 +0700" stop="20260822012000 +0700" channel="antvhd">
+    <title lang="vi">Vì nhân dân phục vụ - Vững kỷ cương - Trọn niềm tin</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822012000 +0700" stop="20260822013000 +0700" channel="antvhd">
+    <title lang="vi">An ninh với cuộc sống - Đưa pháp luật đến gần Công nhân</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822013000 +0700" stop="20260822014000 +0700" channel="antvhd">
+    <title lang="vi">Câu chuyện giao thông - Tăng nặng mức xử phạt xe ô tô cá nhân vận tải khách có thu phí</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822014000 +0700" stop="20260822020000 +0700" channel="antvhd">
+    <title lang="vi">Nhân vật sự kiện - Thiếu nữ Hà Nội và mùa thu lịch sử</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822020000 +0700" stop="20260822023000 +0700" channel="antvhd">
+    <title lang="vi">Phim tài liệu - Những người con của nhân dân: Bộ trưởng Trần Quốc Hoàn - Tập 4: Làm chủ ván cờ</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822023000 +0700" stop="20260822031500 +0700" channel="antvhd">
+    <title lang="vi">Phim truyện: Thượng thực - Tập 7/40</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822031500 +0700" stop="20260822034500 +0700" channel="antvhd">
+    <title lang="vi">Hồ sơ vụ án - Mua bệnh - Bán thời gian</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822034500 +0700" stop="20260822040000 +0700" channel="antvhd">
+    <title lang="vi">Việt Nam quê hương tôi - Sống cùng di sản</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822040000 +0700" stop="20260822043000 +0700" channel="antvhd">
+    <title lang="vi">Nhật ký an ninh</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822043000 +0700" stop="20260822050000 +0700" channel="antvhd">
+    <title lang="vi">Hành trình phá án - Game over cho mạng lưới mã độc toàn cầu</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822050000 +0700" stop="20260822051500 +0700" channel="antvhd">
+    <title lang="vi">Chào cờ và Võ thể dục CAND - Số 15</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822051500 +0700" stop="20260822052500 +0700" channel="antvhd">
+    <title lang="vi">An ninh với cuộc sống - Chuẩn hóa nghi thức Đội</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822052500 +0700" stop="20260822062500 +0700" channel="antvhd">
+    <title lang="vi">Phim tài liệu - Người Công an cách mạng - Tập 22 - Thách thức lớn</title>
+    <length lang="vi">Chương trình này có thời lượng 60 phút</length>
+  </programme>
+  <programme start="20260822062500 +0700" stop="20260822070000 +0700" channel="antvhd">
+    <title lang="vi">An ninh ngày mới</title>
+    <length lang="vi">Chương trình này có thời lượng 35 phút</length>
+  </programme>
+  <programme start="20260822070000 +0700" stop="20260822075000 +0700" channel="antvhd">
+    <title lang="vi">Phim truyện: Lục Phiến Môn - Tập 28/40</title>
+    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
+  </programme>
+  <programme start="20260822075000 +0700" stop="20260822080000 +0700" channel="antvhd">
+    <title lang="vi">Việt Nam quê hương tôi - Quilting – Nét độc bản của nghề thủ công</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822080000 +0700" stop="20260822081000 +0700" channel="antvhd">
+    <title lang="vi">Nhân vật sự kiện - Hành trình gieo lại niềm tin</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822081000 +0700" stop="20260822084000 +0700" channel="antvhd">
+    <title lang="vi">Phim tài liệu - Những người con của nhân dân: Bộ trưởng Trần Quốc Hoàn - Tập 5 - Giữ trọn lời thề</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822084000 +0700" stop="20260822090000 +0700" channel="antvhd">
+    <title lang="vi">Phóng sự - Hàng loạt bến bãi hoạt động trái phép – Chính quyền xử lý ra sao?</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822090000 +0700" stop="20260822090500 +0700" channel="antvhd">
+    <title lang="vi">Tin nhanh</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822090500 +0700" stop="20260822093500 +0700" channel="antvhd">
+    <title lang="vi">Hành trình phá án - Công xưởng giấy thông hành</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822093500 +0700" stop="20260822095000 +0700" channel="antvhd">
+    <title lang="vi">An ninh với cuộc sống - Trẻ hóa tội phạm xâm phạm bản quyền</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822095000 +0700" stop="20260822100500 +0700" channel="antvhd">
+    <title lang="vi">An ninh thế giới</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822100500 +0700" stop="20260822102500 +0700" channel="antvhd">
+    <title lang="vi">Nhịp sống số - Lưới sắt không gian số - Tập 3 - Khi công nghệ là vũ khí đối đầu</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822102500 +0700" stop="20260822110000 +0700" channel="antvhd">
+    <title lang="vi">Phim tài liệu - Những người con của nhân dân - Bộ trưởng Phạm Hùng - Tập 1 - Người chiến sĩ dạ sắt, gan đồng</title>
+    <length lang="vi">Chương trình này có thời lượng 35 phút</length>
+  </programme>
+  <programme start="20260822110000 +0700" stop="20260822113000 +0700" channel="antvhd">
+    <title lang="vi">An ninh toàn cảnh</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822113000 +0700" stop="20260822120000 +0700" channel="antvhd">
+    <title lang="vi">113 online</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822120000 +0700" stop="20260822125000 +0700" channel="antvhd">
+    <title lang="vi">Phim truyện: Quá khứ hận thù - Tập 75/94</title>
+    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
+  </programme>
+  <programme start="20260822125000 +0700" stop="20260822130000 +0700" channel="antvhd">
+    <title lang="vi">Việt Nam quê hương tôi - Chạm vào sắc mộc làng Sình</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822130000 +0700" stop="20260822135000 +0700" channel="antvhd">
+    <title lang="vi">Phim truyện: Thượng thực - Tập 8/40</title>
+    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
+  </programme>
+  <programme start="20260822135000 +0700" stop="20260822140000 +0700" channel="antvhd">
+    <title lang="vi">Câu chuyện giao thông</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822140000 +0700" stop="20260822150000 +0700" channel="antvhd">
+    <title lang="vi">Phim truyện: Tình ảo - Tập 20/24</title>
+    <length lang="vi">Chương trình này có thời lượng 60 phút</length>
+  </programme>
+  <programme start="20260822150000 +0700" stop="20260822151500 +0700" channel="antvhd">
+    <title lang="vi">113 online</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822151500 +0700" stop="20260822153500 +0700" channel="antvhd">
+    <title lang="vi">Nghị quyết 12 - Bước chuyển mình toàn diện trong công tác hồ sơ nghiệp vụ</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822153500 +0700" stop="20260822160500 +0700" channel="antvhd">
+    <title lang="vi">Văn hóa - Thể thao CAND - Lặng lẽ với văn chương</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822160500 +0700" stop="20260822163500 +0700" channel="antvhd">
+    <title lang="vi">Hành trình phá án - Truy vết tiền ảo</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822163500 +0700" stop="20260822165500 +0700" channel="antvhd">
+    <title lang="vi">Kinh tế &amp; Tiêu dùng</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822165500 +0700" stop="20260822170500 +0700" channel="antvhd">
+    <title lang="vi">Việt Nam quê hương tôi - Cô Tô - Những góc nhìn từ biển</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822170500 +0700" stop="20260822180000 +0700" channel="antvhd">
+    <title lang="vi">Phim truyện: Lương duyên ngang trái - Tập 7/26</title>
+    <length lang="vi">Chương trình này có thời lượng 55 phút</length>
+  </programme>
+  <programme start="20260822180000 +0700" stop="20260822190000 +0700" channel="antvhd">
+    <title lang="vi">An ninh 24h</title>
+    <length lang="vi">Chương trình này có thời lượng 60 phút</length>
+  </programme>
+  <programme start="20260822190000 +0700" stop="20260822194500 +0700" channel="antvhd">
+    <title lang="vi">Thời sự VTV Tiếp sóng</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822194500 +0700" stop="20260822200000 +0700" channel="antvhd">
+    <title lang="vi">ANTV kết nối - Số 34/2026</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822200000 +0700" stop="20260822201000 +0700" channel="antvhd">
+    <title lang="vi">Tin nhanh</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822201000 +0700" stop="20260822204500 +0700" channel="antvhd">
+    <title lang="vi">Câu chuyện cuối tuần</title>
+    <length lang="vi">Chương trình này có thời lượng 35 phút</length>
+  </programme>
+  <programme start="20260822204500 +0700" stop="20260822211000 +0700" channel="antvhd">
+    <title lang="vi">Phía sau bản án - Điểm tựa ngày về</title>
+    <length lang="vi">Chương trình này có thời lượng 25 phút</length>
+  </programme>
+  <programme start="20260822211000 +0700" stop="20260822214500 +0700" channel="antvhd">
+    <title lang="vi">Phim truyện: Kế hoạch CM12 - Tập 1/16</title>
+    <length lang="vi">Chương trình này có thời lượng 35 phút</length>
+  </programme>
+  <programme start="20260822214500 +0700" stop="20260822220500 +0700" channel="antvhd">
+    <title lang="vi">Vì nhân dân phục vụ - Vững kỷ cương - Trọn niềm tin</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822220500 +0700" stop="20260822224000 +0700" channel="antvhd">
+    <title lang="vi">Nhật ký an ninh</title>
+    <length lang="vi">Chương trình này có thời lượng 35 phút</length>
+  </programme>
+  <programme start="20260822224000 +0700" stop="20260822233000 +0700" channel="antvhd">
+    <title lang="vi">Phim truyện: Người điều tra thương nghiệp - Tập 41/49</title>
+    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
+  </programme>
+  <programme start="20260822233000 +0700" stop="20260822235000 +0700" channel="antvhd">
+    <title lang="vi">Xây dựng Đảng - Người truyền lửa Nghị quyết</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822235000 +0700" stop="20260823002000 +0700" channel="antvhd">
+    <title lang="vi">Nhân vật sự kiện - Người giữ ký ức an ninh</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
   <programme start="20260822000000 +0700" stop="20260822010000 +0700" channel="arirang">
     <title lang="vi">SIMPLY K POP GATEWAY TO KOREA - 12</title>
     <length lang="vi">Chương trình này có thời lượng 60 phút</length>
@@ -29074,6 +29286,206 @@
   </programme>
   <programme start="20260822233000 +0700" stop="20260823000000 +0700" channel="danang2">
     <title lang="vi">Phim tài liệu - Nửa thế kỷ một tấm lòng</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822053000 +0700" stop="20260822053500 +0700" channel="daklak">
+    <title lang="vi">Nhạc hiệu + Giới thiệu chương trình PT-TH</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822053500 +0700" stop="20260822060000 +0700" channel="daklak">
+    <title lang="vi">Thời sự tiếng Ê Đê</title>
+    <length lang="vi">Chương trình này có thời lượng 25 phút</length>
+  </programme>
+  <programme start="20260822060000 +0700" stop="20260822061500 +0700" channel="daklak">
+    <title lang="vi">Đảng và Cuộc sống: Tăng đối thoại để giải phóng mặt bằng các dự án</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822061500 +0700" stop="20260822063500 +0700" channel="daklak">
+    <title lang="vi">Bản tin sáng</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822063500 +0700" stop="20260822065000 +0700" channel="daklak">
+    <title lang="vi">Thiếu nhi – Hoạt hình: Wiki và những người bạn (tập 41- phần 1)</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822065000 +0700" stop="20260822073500 +0700" channel="daklak">
+    <title lang="vi">Phim truyện HQ: Sông đón trăng lên (Tập 10)</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822073500 +0700" stop="20260822075000 +0700" channel="daklak">
+    <title lang="vi">Khoa học và Đời sống: Đảm bảo hệ thống mạng truyền số liệu chuyên dùng trong các cơ quan hành chính</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822075000 +0700" stop="20260822080000 +0700" channel="daklak">
+    <title lang="vi">Địa chỉ cho những tấm lòng vàng</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822080000 +0700" stop="20260822081500 +0700" channel="daklak">
+    <title lang="vi">Phóng sự: Điều trị sốt xuất huyết ở trẻ em và người lớn – Những điều người dân cần biết</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822081500 +0700" stop="20260822083000 +0700" channel="daklak">
+    <title lang="vi">Sức sống nông thôn mới: Phát triển giao thông ở xã khó khăn</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822083000 +0700" stop="20260822090000 +0700" channel="daklak">
+    <title lang="vi">Phim tài liệu: Những người con của Nhân dân: Bộ trưởng Mai Chí Thọ (Tập 2: Đất hóa tâm hồn)</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822090000 +0700" stop="20260822091500 +0700" channel="daklak">
+    <title lang="vi">Đời sống số: Đưa vùng trồng sầu riêng lên bản đồ số</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822091500 +0700" stop="20260822100000 +0700" channel="daklak">
+    <title lang="vi">Phim truyện TQ: Chân tướng (Tập 26)</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822100000 +0700" stop="20260822101500 +0700" channel="daklak">
+    <title lang="vi">Sống vui sống khỏe: Sống khỏe từ những giá trị trao đi</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822101500 +0700" stop="20260822110000 +0700" channel="daklak">
+    <title lang="vi">Phim tài liệu: Thủ tướng Phạm Văn Đồng - Một trái tim lớn</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822110000 +0700" stop="20260822111500 +0700" channel="daklak">
+    <title lang="vi">Phim Sitcom: Xóm trọ thanh xuân (tập 16)</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822111500 +0700" stop="20260822113000 +0700" channel="daklak">
+    <title lang="vi">Đắk Lắk – Những điểm đến du lịch hấp dẫn: Giữ gìn văn hóa truyền thống để phát triển du lịch cộng đồng</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822113000 +0700" stop="20260822120000 +0700" channel="daklak">
+    <title lang="vi">Thời sự Đắk Lắk + Bản tin Thể thao</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822120000 +0700" stop="20260822121500 +0700" channel="daklak">
+    <title lang="vi">Nhịp sống trẻ: Chạm đá, chạm đam mê</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822121500 +0700" stop="20260822130000 +0700" channel="daklak">
+    <title lang="vi">Phim truyện VN: Ma Vương hồi sinh (tập 75 - tập cuối)</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822130000 +0700" stop="20260822130500 +0700" channel="daklak">
+    <title lang="vi">Giới thiệu chương trình truyền hình tiếp theo</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822130500 +0700" stop="20260822132000 +0700" channel="daklak">
+    <title lang="vi">Sức khỏe cho mọi người: Cảnh báo thoát vị đĩa đệm cột sống thắt lưng do lao động nặng</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822132000 +0700" stop="20260822133500 +0700" channel="daklak">
+    <title lang="vi">Văn hóa và du lịch Đắk Lắk: Bước vào Nhà dài, chạm vào đời sống thực của người ÊĐê</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822133500 +0700" stop="20260822135000 +0700" channel="daklak">
+    <title lang="vi">Hương rừng – Vị biển: Về Lò 3 nghe biển kể chuyện</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822135000 +0700" stop="20260822140500 +0700" channel="daklak">
+    <title lang="vi">Tạp chí Kinh tế: Phát triển công nghiệp – khơi thông động lực tăng trưởng mới</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822140500 +0700" stop="20260822143000 +0700" channel="daklak">
+    <title lang="vi">Phim tài liệu: Văn hóa còn thì dân tộc còn</title>
+    <length lang="vi">Chương trình này có thời lượng 25 phút</length>
+  </programme>
+  <programme start="20260822143000 +0700" stop="20260822150000 +0700" channel="daklak">
+    <title lang="vi">Thời sự Đắk Lắk</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822150000 +0700" stop="20260822154500 +0700" channel="daklak">
+    <title lang="vi">Phim truyện ĐL: Vệ sỹ độc quyền (tập 7)</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822154500 +0700" stop="20260822160000 +0700" channel="daklak">
+    <title lang="vi">Dân số và Phát triển: Chung tay giảm mang thai ngoài ý muốn ở tuổi vị thành niên</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822160000 +0700" stop="20260822161500 +0700" channel="daklak">
+    <title lang="vi">Để rừng mãi xanh: Phát huy giá trị cây trâm ở Đồng Xuân</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822161500 +0700" stop="20260822163000 +0700" channel="daklak">
+    <title lang="vi">Pháp luật và đời sống: Đảm bảo an ninh nguồn nước trước tác động biến đổi khí hậu</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822163000 +0700" stop="20260822164500 +0700" channel="daklak">
+    <title lang="vi">Đắk Lắk – Tiềm năng và cơ hội đầu tư: Từ lễ hội sầu riêng đến cơ hội đầu tư</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822164500 +0700" stop="20260822165700 +0700" channel="daklak">
+    <title lang="vi">Thiếu nhi – Hoạt hình: Wiki và những người bạn (tập 42 - phần 1)</title>
+    <length lang="vi">Chương trình này có thời lượng 12 phút</length>
+  </programme>
+  <programme start="20260822165700 +0700" stop="20260822170000 +0700" channel="daklak">
+    <title lang="vi">Giới thiệu chương trình TH chiều và tối</title>
+    <length lang="vi">Chương trình này có thời lượng 3 phút</length>
+  </programme>
+  <programme start="20260822170000 +0700" stop="20260822171500 +0700" channel="daklak">
+    <title lang="vi">Thời sự tiếng M&#x27;Nông</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822171500 +0700" stop="20260822174500 +0700" channel="daklak">
+    <title lang="vi">Thời sự tiếng Ê Đê</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822174500 +0700" stop="20260822183000 +0700" channel="daklak">
+    <title lang="vi">Phim truyện Nga: Đội cứu hộ (Tập 4)</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822183000 +0700" stop="20260822190000 +0700" channel="daklak">
+    <title lang="vi">Thời sự Đắk Lắk</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822190000 +0700" stop="20260822194300 +0700" channel="daklak">
+    <title lang="vi">Tiếp sóng Thời sự VTV1</title>
+    <length lang="vi">Chương trình này có thời lượng 43 phút</length>
+  </programme>
+  <programme start="20260822194300 +0700" stop="20260822194500 +0700" channel="daklak">
+    <title lang="vi">DRT giới thiệu chương trình tiếp theo</title>
+    <length lang="vi">Chương trình này có thời lượng 2 phút</length>
+  </programme>
+  <programme start="20260822194500 +0700" stop="20260822200000 +0700" channel="daklak">
+    <title lang="vi">Truyền hình Hải quân Việt Nam</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822200000 +0700" stop="20260822201500 +0700" channel="daklak">
+    <title lang="vi">An toàn giao thông: Đảm bảo trật tự ATGT Lễ hội sầu riêng Đắk Lắk 2026</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822201500 +0700" stop="20260822210000 +0700" channel="daklak">
+    <title lang="vi">Phim truyện VN: Tận hiến (tập 2)</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822210000 +0700" stop="20260822213000 +0700" channel="daklak">
+    <title lang="vi">Tọa đàm: Sầu riêng Đắk Lắk– Từ nông sản đến tinh hoa ẩm thực</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822213000 +0700" stop="20260822214500 +0700" channel="daklak">
+    <title lang="vi">Thể thao cuối tuần</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822214500 +0700" stop="20260822221500 +0700" channel="daklak">
+    <title lang="vi">Phim tài liệu: Những người con của Nhân dân: Bộ trưởng Mai Chí Thọ (Tập 3: TP. Hồ Chí Minh – Miền đất tin yêu)</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822221500 +0700" stop="20260822230000 +0700" channel="daklak">
+    <title lang="vi">Phim truyện VN: Tình yêu giữa thần và ác ma (tập 64)</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822230000 +0700" stop="20260822231500 +0700" channel="daklak">
+    <title lang="vi">Bản tin cuối ngày + Bản tin Thể thao</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822231500 +0700" stop="20260822235900 +0700" channel="daklak">
+    <title lang="vi">Phim truyện VN: Tình yêu giữa thần và ác ma (tập 65)</title>
+    <length lang="vi">Chương trình này có thời lượng 44 phút</length>
+  </programme>
+  <programme start="20260822235900 +0700" stop="20260823002900 +0700" channel="daklak">
+    <title lang="vi">Giới thiệu chương trình cuối tối</title>
     <length lang="vi">Chương trình này có thời lượng 30 phút</length>
   </programme>
   <programme start="20260822000000 +0700" stop="20260822002100 +0700" channel="davinci">
@@ -31638,6 +32050,294 @@
   </programme>
   <programme start="20260822222500 +0700" stop="20260822225500 +0700" channel="gialai">
     <title lang="vi">Bản tin GTV News</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822000000 +0700" stop="20260822002000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin Thể thao</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822002000 +0700" stop="20260822003000 +0700" channel="hanoi1">
+    <title lang="vi">Hà Nội đẹp và chưa đẹp</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822003000 +0700" stop="20260822011500 +0700" channel="hanoi1">
+    <title lang="vi">Phim truyền hình: Phù sa ngọt - Phim Việt Nam – tập 38</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822011500 +0700" stop="20260822013000 +0700" channel="hanoi1">
+    <title lang="vi">Giáo dục và đào tạo - Ổn định mạng lưới trường học, nâng cao chất lượng giáo dục</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822013000 +0700" stop="20260822020000 +0700" channel="hanoi1">
+    <title lang="vi">Hà Nội 18H</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822020000 +0700" stop="20260822021000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin 141</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822021000 +0700" stop="20260822022000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin Kinh tế - tài chính</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822022000 +0700" stop="20260822023000 +0700" channel="hanoi1">
+    <title lang="vi">Hà Nội đến để yêu - Đá ong ở Đường Lâm</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822023000 +0700" stop="20260822030000 +0700" channel="hanoi1">
+    <title lang="vi">Góc nhìn Hà Nội - Xu hướng triển lãm không gian nghệ thuật tại Thủ đô</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822030000 +0700" stop="20260822034500 +0700" channel="hanoi1">
+    <title lang="vi">Phim truyện: Bao Thanh Thiên - Phim Trung Quốc – tập 22</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822034500 +0700" stop="20260822035000 +0700" channel="hanoi1">
+    <title lang="vi">Món ngon Hà thành - Gà ủ khói</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822035000 +0700" stop="20260822040000 +0700" channel="hanoi1">
+    <title lang="vi">Chuyện quanh ta - Người gác đêm - Tập 30</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822040000 +0700" stop="20260822042000 +0700" channel="hanoi1">
+    <title lang="vi">Vấn đề kinh tế - Nhập siêu cao, tỷ giá vẫn ổn định</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822042000 +0700" stop="20260822043000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin Tiếng Anh</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822043000 +0700" stop="20260822044500 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin Tiếng Trung</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822044500 +0700" stop="20260822053500 +0700" channel="hanoi1">
+    <title lang="vi">Ca nhạc - Bài ca dâng Bác</title>
+    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
+  </programme>
+  <programme start="20260822053500 +0700" stop="20260822055000 +0700" channel="hanoi1">
+    <title lang="vi">Thể dục buổi sáng</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822055000 +0700" stop="20260822060000 +0700" channel="hanoi1">
+    <title lang="vi">Hà Nội đến để yêu - Múa rối gia đình</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822060000 +0700" stop="20260822063000 +0700" channel="hanoi1">
+    <title lang="vi">Hà Nội buổi sáng</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822063000 +0700" stop="20260822063500 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin Dự báo thời tiết</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822063500 +0700" stop="20260822064000 +0700" channel="hanoi1">
+    <title lang="vi">Người tốt quanh ta - Người trông coi ngôi nhà từng hai lần được đón Bác</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822064000 +0700" stop="20260822065500 +0700" channel="hanoi1">
+    <title lang="vi">Nhịp sống Hà Nội - Hướng dẫn viên du lịch miễn phí</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822065500 +0700" stop="20260822070500 +0700" channel="hanoi1">
+    <title lang="vi">Chuyển đổi xanh - Mở không gian phát triển nông nghiệp xanh</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822070500 +0700" stop="20260822072000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin Nhà đất và đầu tư</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822072000 +0700" stop="20260822073000 +0700" channel="hanoi1">
+    <title lang="vi">Hà Nội đẹp và chưa đẹp</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822073000 +0700" stop="20260822075000 +0700" channel="hanoi1">
+    <title lang="vi">Sản xuất xanh - năng lượng sạch - Phú An trên hành trình sản xuất xanh</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822075000 +0700" stop="20260822080000 +0700" channel="hanoi1">
+    <title lang="vi">Sống an toàn - Rau an toàn kiểm soát chất lượng từ gốc</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822080000 +0700" stop="20260822084000 +0700" channel="hanoi1">
+    <title lang="vi">Phim truyền hình: Phù sa ngọt - Phim Việt Nam - tập 39</title>
+    <length lang="vi">Chương trình này có thời lượng 40 phút</length>
+  </programme>
+  <programme start="20260822084000 +0700" stop="20260822090000 +0700" channel="hanoi1">
+    <title lang="vi">Địa chỉ từ thiện - Ấm lòng suất cơm sẻ chia</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822090000 +0700" stop="20260822091500 +0700" channel="hanoi1">
+    <title lang="vi">Thời sự</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822091500 +0700" stop="20260822094500 +0700" channel="hanoi1">
+    <title lang="vi">Hà Nội review - Không gian trải nghiệm nét đẹp truyền thống mùa Vu lan</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822094500 +0700" stop="20260822100000 +0700" channel="hanoi1">
+    <title lang="vi">Giáo dục và đào tạo - Chuẩn bị cơ sở vật chất cho năm học mới</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822100000 +0700" stop="20260822103000 +0700" channel="hanoi1">
+    <title lang="vi">Văn hóa và sự kiện - Đưa tinh hoa quá khứ trở lại cuộc sống đương đại</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822103000 +0700" stop="20260822104000 +0700" channel="hanoi1">
+    <title lang="vi">Góc nhìn kiến tạo - Một Hà Nội, nhiều trung tâm</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822104000 +0700" stop="20260822111000 +0700" channel="hanoi1">
+    <title lang="vi">Cuộc sống thành thị - Người giữ lửa</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822111000 +0700" stop="20260822113000 +0700" channel="hanoi1">
+    <title lang="vi">Vì trẻ em - Ung thư ở trẻ em</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822113000 +0700" stop="20260822120000 +0700" channel="hanoi1">
+    <title lang="vi">Thời sự</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822120000 +0700" stop="20260822124500 +0700" channel="hanoi1">
+    <title lang="vi">Phim truyện: Người vợ hoàn hảo - Phim Hàn Quốc – tập 82</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822124500 +0700" stop="20260822125000 +0700" channel="hanoi1">
+    <title lang="vi">Món ngon Hà thành - Bánh chả lá chanh</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822125000 +0700" stop="20260822130000 +0700" channel="hanoi1">
+    <title lang="vi">Người tốt quanh ta - Ngôi nhà thứ hai của người khuyết tật</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822130000 +0700" stop="20260822134500 +0700" channel="hanoi1">
+    <title lang="vi">Phim truyền hình: Mật lệnh hoa sữa - Phim Việt Nam – tập 6</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822134500 +0700" stop="20260822140000 +0700" channel="hanoi1">
+    <title lang="vi">Nhịp sống Hà Nội - Chơi đá cầu sau giờ làm việc</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822140000 +0700" stop="20260822141500 +0700" channel="hanoi1">
+    <title lang="vi">Danh nhân Thăng Long - Hà Nội - Chí sĩ yêu nước Bùi Bằng Đoàn</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822141500 +0700" stop="20260822142500 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin thể thao</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822142500 +0700" stop="20260822150000 +0700" channel="hanoi1">
+    <title lang="vi">Di sản kể chuyện - Mật mã điêu khắc đình Tường Phiêu - Tập 2</title>
+    <length lang="vi">Chương trình này có thời lượng 35 phút</length>
+  </programme>
+  <programme start="20260822150000 +0700" stop="20260822152000 +0700" channel="hanoi1">
+    <title lang="vi">Thời sự</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822152000 +0700" stop="20260822160000 +0700" channel="hanoi1">
+    <title lang="vi">Ca nhạc - Lung linh Hồ Gươm</title>
+    <length lang="vi">Chương trình này có thời lượng 40 phút</length>
+  </programme>
+  <programme start="20260822160000 +0700" stop="20260822162000 +0700" channel="hanoi1">
+    <title lang="vi">Truyền hình an ninh Thủ đô - Trẻ hóa tội phạm xâm phạm bản quyền</title>
+    <length lang="vi">Chương trình này có thời lượng 20 phút</length>
+  </programme>
+  <programme start="20260822162000 +0700" stop="20260822164500 +0700" channel="hanoi1">
+    <title lang="vi">Sức khỏe cộng đồng - Khám thai định kỳ – Hành trình bảo vệ sức khỏe mẹ và bé</title>
+    <length lang="vi">Chương trình này có thời lượng 25 phút</length>
+  </programme>
+  <programme start="20260822164500 +0700" stop="20260822170000 +0700" channel="hanoi1">
+    <title lang="vi">Chuyện quanh ta - Hà Nội xin chào - Món quà của con</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822170000 +0700" stop="20260822172500 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin Giao thông Hà Nội</title>
+    <length lang="vi">Chương trình này có thời lượng 25 phút</length>
+  </programme>
+  <programme start="20260822172500 +0700" stop="20260822173000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin Dự báo thời tiết</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822173000 +0700" stop="20260822174500 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin Nhà đất và đầu tư</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822174500 +0700" stop="20260822180000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin Kinh tế - Tài chính</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822180000 +0700" stop="20260822183000 +0700" channel="hanoi1">
+    <title lang="vi">Hà Nội 18H</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822183000 +0700" stop="20260822190000 +0700" channel="hanoi1">
+    <title lang="vi">Thời sự</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822190000 +0700" stop="20260822194000 +0700" channel="hanoi1">
+    <title lang="vi">Tiếp sóng chương trình thời sự Đài THVN</title>
+    <length lang="vi">Chương trình này có thời lượng 40 phút</length>
+  </programme>
+  <programme start="20260822194000 +0700" stop="20260822194500 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin Dự báo thời tiết</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822194500 +0700" stop="20260822195000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin thể thao</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822195000 +0700" stop="20260822200000 +0700" channel="hanoi1">
+    <title lang="vi">Hà Nội đẹp và chưa đẹp</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822200000 +0700" stop="20260822204500 +0700" channel="hanoi1">
+    <title lang="vi">Di sản kể chuyện - Mật ngữ cổ tự chùa Thầy</title>
+    <length lang="vi">Chương trình này có thời lượng 45 phút</length>
+  </programme>
+  <programme start="20260822204500 +0700" stop="20260822205000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin thể thao</title>
+    <length lang="vi">Chương trình này có thời lượng 5 phút</length>
+  </programme>
+  <programme start="20260822205000 +0700" stop="20260822210000 +0700" channel="hanoi1">
+    <title lang="vi">Hà Nội đến để yêu - Rực rỡ sắc hoa</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822210000 +0700" stop="20260822215000 +0700" channel="hanoi1">
+    <title lang="vi">Phim truyện: Bao Thanh Thiên - Phim Trung Quốc – tập 23</title>
+    <length lang="vi">Chương trình này có thời lượng 50 phút</length>
+  </programme>
+  <programme start="20260822215000 +0700" stop="20260822220000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin 141</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822220000 +0700" stop="20260822221500 +0700" channel="hanoi1">
+    <title lang="vi">Tác giả - tác phẩm - Ca khúc Hà Nội nhỏ của anh</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822221500 +0700" stop="20260822224500 +0700" channel="hanoi1">
+    <title lang="vi">Phóng sự tài liệu - Hành trình kết nối nghệ thuật truyền thống và hiện đại</title>
+    <length lang="vi">Chương trình này có thời lượng 30 phút</length>
+  </programme>
+  <programme start="20260822224500 +0700" stop="20260822230000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin cuối ngày</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822230000 +0700" stop="20260822231000 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin tiếng Anh</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822231000 +0700" stop="20260822232500 +0700" channel="hanoi1">
+    <title lang="vi">Bản tin tiếng Trung</title>
+    <length lang="vi">Chương trình này có thời lượng 15 phút</length>
+  </programme>
+  <programme start="20260822232500 +0700" stop="20260822233500 +0700" channel="hanoi1">
+    <title lang="vi">Địa chỉ từ thiện - Ấm lòng suất cơm sẻ chia</title>
+    <length lang="vi">Chương trình này có thời lượng 10 phút</length>
+  </programme>
+  <programme start="20260822233500 +0700" stop="20260823000500 +0700" channel="hanoi1">
+    <title lang="vi">Văn hóa và sự kiện - Đưa tinh hoa quá khứ trở lại cuộc sống đương đại</title>
     <length lang="vi">Chương trình này có thời lượng 30 phút</length>
   </programme>
   <programme start="20260822053000 +0700" stop="20260822053200 +0700" channel="hatinh">
@@ -42617,16 +43317,16 @@
     <length lang="vi">Chương trình này có thời lượng 110 phút</length>
   </programme>
   <programme start="20260822094000 +0700" stop="20260822110500 +0700" channel="spotv1">
-    <title lang="vi">Motorsports: 2026 Supercars - Century Batteries Ipswich Super 440 Live - Race 26</title>
+    <title lang="vi">Motorsports: 2026 Supercars - Century Batteries Ipswich Super 440 - Race 26</title>
     <length lang="vi">Chương trình này có thời lượng 85 phút</length>
   </programme>
-  <programme start="20260822110500 +0700" stop="20260822131500 +0700" channel="spotv1">
+  <programme start="20260822110500 +0700" stop="20260822131000 +0700" channel="spotv1">
     <title lang="vi">Football: Roshn Saudi League 26/27 - MD 2 Al Qadisiyah vs Al Ittihad</title>
-    <length lang="vi">Chương trình này có thời lượng 130 phút</length>
+    <length lang="vi">Chương trình này có thời lượng 125 phút</length>
   </programme>
-  <programme start="20260822131500 +0700" stop="20260822143000 +0700" channel="spotv1">
-    <title lang="vi">Motorsports: 2026 Supercars - Century Batteries Ipswich Super 440 Live - Race 27</title>
-    <length lang="vi">Chương trình này có thời lượng 75 phút</length>
+  <programme start="20260822131000 +0700" stop="20260822143000 +0700" channel="spotv1">
+    <title lang="vi">Motorsports: 2026 Supercars - Century Batteries Ipswich Super 440 - Race 27</title>
+    <length lang="vi">Chương trình này có thời lượng 80 phút</length>
   </programme>
   <programme start="20260822143000 +0700" stop="20260822163000 +0700" channel="spotv1">
     <title lang="vi">Football: Roshn Saudi League 26/27 - MD 2 Al Fayha vs Al Hilal</title>
@@ -42641,7 +43341,7 @@
     <length lang="vi">Chương trình này có thời lượng 30 phút</length>
   </programme>
   <programme start="20260822190000 +0700" stop="20260822203000 +0700" channel="spotv1">
-    <title lang="vi">Sailing: SailGP S6 - Rockwool Germany Sail Grand Prix Live - Day 1 Race</title>
+    <title lang="vi">Sailing: SailGP S6 - Rockwool Germany Sail Grand Prix - Day 1 Race</title>
     <length lang="vi">Chương trình này có thời lượng 90 phút</length>
   </programme>
   <programme start="20260822203000 +0700" stop="20260822233000 +0700" channel="spotv1">
