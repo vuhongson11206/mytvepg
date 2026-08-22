@@ -4,8 +4,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    # 06:00 giờ Việt Nam
-    # GitHub Actions dùng UTC
+    # 03:00 giờ Việt Nam = 20:00 UTC ngày hôm trước
     - cron: "10 0 * * *"
 
 permissions:
@@ -18,7 +17,7 @@ jobs:
     steps:
 
       # =====================================================
-      # CHECKOUT
+      # Checkout
       # =====================================================
 
       - name: Checkout repository
@@ -27,7 +26,7 @@ jobs:
           fetch-depth: 0
 
       # =====================================================
-      # PYTHON
+      # Python
       # =====================================================
 
       - name: Setup Python
@@ -36,16 +35,16 @@ jobs:
           python-version: "3.12"
 
       # =====================================================
-      # INSTALL
+      # Install packages
       # =====================================================
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4 openpyxl
+          pip install requests openpyxl
 
       # =====================================================
-      # RUN TV360
+      # Run TV360
       # =====================================================
 
       - name: Run TV360 EPG
@@ -53,27 +52,35 @@ jobs:
           python tv360/tv360.py
 
       # =====================================================
-      # CHECK FILES
+      # Show result
       # =====================================================
 
-      - name: Check generated files
+      - name: Show TV360 log
+        if: always()
         run: |
-          echo "===== TV360 DIRECTORY ====="
-          ls -lah tv360/
+          echo "======================================"
+          echo "TV360 LOG"
+          echo "======================================"
 
-          echo ""
-          echo "===== XML SIZE ====="
-          wc -c tv360/tv360epg.xml
-
-          echo ""
-          echo "===== LOG ====="
-          head -100 tv360/tv360log.txt || true
+          if [ -f tv360/tv360log.txt ]; then
+            cat tv360/tv360log.txt
+          else
+            echo "Không tìm thấy tv360log.txt"
+          fi
 
       # =====================================================
-      # COMMIT
+      # Git status
       # =====================================================
 
-      - name: Commit TV360 data
+      - name: Check Git changes
+        run: |
+          git status --short
+
+      # =====================================================
+      # Commit + Push
+      # =====================================================
+
+      - name: Commit and push changes
         run: |
 
           git config user.name "github-actions[bot]"
@@ -82,7 +89,6 @@ jobs:
           git add tv360/tv360channels.xlsx
           git add tv360/tv360epg.xml
           git add tv360/tv360log.txt
-          git add tv360/tv360_state.json
 
           if git diff --cached --quiet; then
             echo "Không có thay đổi để commit."
@@ -91,11 +97,6 @@ jobs:
 
           git commit -m "Update TV360 EPG"
 
-      # =====================================================
-      # PUSH
-      # =====================================================
-
-      - name: Push changes
-        run: |
           git pull --rebase origin main
+
           git push origin HEAD:main
