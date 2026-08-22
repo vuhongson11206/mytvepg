@@ -1,368 +1,390 @@
 ================================================================================
-TV360 - 2026-08-22 22:42:39
+TV360 - 2026-08-22 22:53:52
 ================================================================================
 Số lượng kênh hiện tại: 174
-Chênh lệch so với lần chạy trước: Chưa có dữ liệu
+Chênh lệch so với lần chạy trước: 0
 
-KÊNH MỚI (174):
-  + 1 | TV360+ 2
-  + 2 | VTV1 HD
-  + 3 | VTV2 HD
-  + 4 | VTV3 HD
-  + 6 | VTV7 HD
-  + 8 | VTV9 HD
-  + 9 | HTV4
-  + 11 | HTVC gia đình
-  + 12 | HTVC phụ Nữ
-  + 13 | HTVC thuần việt
-  + 14 | HTVC ca nhạc
-  + 15 | HTVC phim truyện HD
-  + 19 | QPVN HD
-  + 20 | ANTV
-  + 25 | Vĩnh Long 1
-  + 26 | Vĩnh Long 2
-  + 31 | YouTV
-  + 32 | HITV
-  + 33 | Hà Nội 1
-  + 34 | Hà Nội 2
-  + 35 | An Giang 2
-  + 39 | Bắc Ninh
-  + 45 | Lâm Đồng 2
-  + 46 | Cà Mau
-  + 47 | Cần Thơ 1
-  + 48 | Cao Bằng
-  + 49 | Đà Nẵng 1
-  + 51 | Đắk Lắk
-  + 52 | Điện Biên
-  + 53 | Đồng Nai 1
-  + 54 | Đồng Tháp 1
-  + 55 | Gia Lai
-  + 58 | Hà Tĩnh
-  + 59 | Hải Phòng 3
-  + 60 | Hải Phòng
-  + 61 | Cần Thơ 2
-  + 63 | Huế
-  + 64 | Hưng Yên
-  + 65 | Khánh Hòa
-  + 66 | An Giang 1
-  + 68 | Lai Châu
-  + 69 | Lâm Đồng 1
-  + 70 | Lạng Sơn
-  + 71 | Lào Cai
-  + 72 | Tây Ninh 1
-  + 74 | Nghệ An
-  + 75 | Ninh Bình
-  + 76 | Khánh Hòa 1
-  + 77 | Phú Thọ
-  + 80 | Đà Nẵng 2
-  + 81 | Quảng Ngãi
-  + 82 | Quảng Ninh 1
-  + 83 | Quảng Trị
-  + 84 | Cần Thơ 3
-  + 85 | Sơn La
-  + 88 | Thái Nguyên
-  + 89 | Thanh Hóa
-  + 90 | Đồng Tháp 2
-  + 91 | Vĩnh Long 5
-  + 92 | Tuyên Quang
-  + 96 | France 24
-  + 98 | VTV10 HD
-  + 99 | HGTV
-  + 106 | NHK
-  + 108 | VTV4 HD
-  + 109 | DW
-  + 110 | VTV5 HD
-  + 111 | Arirang
-  + 112 | Channel News Asia
-  + 115 | VTV8 HD
-  + 132 | HTVC+ Channel B
-  + 133 | HTVC du lịch & cuộc sống
-  + 134 | Quảng Ninh 3
-  + 136 | O2TV
-  + 148 | TV360+ 3
-  + 151 | An Viên HD
-  + 157 | VTV5 Tây Nam Bộ
-  + 159 | Cinema World
-  + 163 | FashionTV
-  + 169 | VTVcab 23 - Golf Channel
-  + 170 | VTVcab 18 - On Sports News
-  + 173 | VTVcab 3 - On Sports
-  + 174 | VTVcab 16 - On Football HD
-  + 175 | VTVcab 2 - Phim Việt HD
-  + 176 | VTVcab10 - On Cine HD
-  + 177 | VTVcab19 – Vie Dramas
-  + 178 | VTVcab 8 Bibi SD
-  + 179 | VTVcab 21- Cartoon Kids HD
-  + 180 | VTVcab 1 - Vie Giải Trí HD
-  + 181 | Vtvcab 4 – On Movies
-  + 182 | VTVcab 5 - E Channel HD
-  + 183 | VTVcab 6 - On Sports +
-  + 184 | VTVcab 12 - StyleTV HD
-  + 185 | VTVcab15 – On Music
-  + 186 | Vtvcab17 – Trending TV
-  + 187 | VTVcab 20 - V Family HD
-  + 188 | VTVcab 22 - Life TV HD
-  + 189 | VTVcab 9 - InfoTV HD
-  + 190 | HTV1
-  + 191 | HTV2
-  + 192 | HTV3
-  + 193 | HTV7 HD
-  + 194 | HTV9 HD
-  + 195 | HTV Thể Thao
-  + 201 | SCTV2 - Today TV
-  + 207 | VTV5 Tây Nguyên
-  + 213 | KBS World
-  + 214 | DaVinci HD
-  + 215 | AFN HD
-  + 216 | Outdoor HD
-  + 219 | Vĩnh Long 3
-  + 220 | Vĩnh Long 4
-  + 232 | SCTV6
-  + 235 | DreamWorks
-  + 237 | Bloomberg
-  + 239 | Cinemax
-  + 255 | Đồng Nai
-  + 271 | HBO
-  + 273 | Warner TV
-  + 275 | CNN
-  + 277 | Cartoon
-  + 279 | Discovery Channel
-  + 281 | AXN
-  + 283 | ABC Australia
-  + 2458 | TV360+ 4
-  + 2554 | TV360+ 1
-  + 9838 | BTV6
-  + 9852 | TV5
-  + 9855 | CNBC
-  + 9856 | History HD
-  + 9867 | TV360+ 5
-  + 9868 | TV360+ 6
-  + 9869 | TV360+ 7
-  + 9870 | TV360+ 8
-  + 9887 | TV360+ 9
-  + 9901 | Kix
-  + 9902 | Phim Việt
-  + 9903 | Phim Âu Mỹ
-  + 9904 | TV360
-  + 9905 | FM90
-  + 9906 | FM96
-  + 9934 | Hoạt hình
-  + 9951 | VIETNAM TODAY HD
-  + 9957 | TV360+ 10
-  + 9958 | TV360+ 11
-  + 9965 | Bóng chuyền
-  + 10001 | TV360+ 12
-  + 10007 | France 24 SD
-  + 10008 | 360 Hoa Ngữ
-  + 10009 | 360 Hành động Châu Á
-  + 10010 | 360 K-Drama
-  + 10011 | 360 Hài -Tình cảm
-  + 10012 | 360 Phim Kinh điển
-  + 10013 | 360 Anime
-  + 10014 | 360 C1 Châu Âu
-  + 10015 | 360 C2 Châu Âu
-  + 10016 | 360 C3 Châu Âu
-  + 10017 | 360 Thể Thao Châu Á
-  + 10018 | 360 Công Thức 1
-  + 10019 | 360 Bundesliga
-  + 10020 | 360 Golf
-  + 10021 | 360 Tennis
-  + 10022 | TV360+ 13
-  + 10023 | TV360+ 14
-  + 10024 | TV360+ 15
-  + 10036 | VOH AM610
-  + 10037 | VOH FM99
-  + 10038 | VOH FM87
-  + 10039 | VOH FM95
-  + 10040 | VOH FM92 Radio
-  + 10043 | VTV6 HD
-  + 10045 | 360 Thiếu Nhi
-  + 10049 | TV360+ 16
-  + 10055 | 360 Phim 4K
+KÊNH MỚI (0):
+  Không có.
 
 KÊNH KHÔNG CÒN (0):
   Không có.
 
+Số kênh có EPG: 173
+Số kênh không có EPG: 1
+
+CHI TIẾT KÊNH CÓ EPG:
+  + 193 | HTV7 HD | 40 chương trình
+  + 2 | VTV1 HD | 61 chương trình
+  + 20 | ANTV | 53 chương trình
+  + 19 | QPVN HD | 57 chương trình
+  + 110 | VTV5 HD | 52 chương trình
+  + 9951 | VIETNAM TODAY HD | 72 chương trình
+  + 3 | VTV2 HD | 53 chương trình
+  + 4 | VTV3 HD | 45 chương trình
+  + 108 | VTV4 HD | 61 chương trình
+  + 207 | VTV5 Tây Nguyên | 53 chương trình
+  + 157 | VTV5 Tây Nam Bộ | 40 chương trình
+  + 10043 | VTV6 HD | 32 chương trình
+  + 6 | VTV7 HD | 45 chương trình
+  + 115 | VTV8 HD | 63 chương trình
+  + 8 | VTV9 HD | 66 chương trình
+  + 98 | VTV10 HD | 45 chương trình
+  + 2554 | TV360+ 1 | 2 chương trình
+  + 1 | TV360+ 2 | 2 chương trình
+  + 148 | TV360+ 3 | 1 chương trình
+  + 2458 | TV360+ 4 | 1 chương trình
+  + 9867 | TV360+ 5 | 1 chương trình
+  + 9868 | TV360+ 6 | 3 chương trình
+  + 9869 | TV360+ 7 | 1 chương trình
+  + 9870 | TV360+ 8 | 2 chương trình
+  + 9887 | TV360+ 9 | 2 chương trình
+  + 9957 | TV360+ 10 | 2 chương trình
+  + 9958 | TV360+ 11 | 1 chương trình
+  + 10001 | TV360+ 12 | 3 chương trình
+  + 10022 | TV360+ 13 | 2 chương trình
+  + 10023 | TV360+ 14 | 2 chương trình
+  + 10024 | TV360+ 15 | 1 chương trình
+  + 10049 | TV360+ 16 | 3 chương trình
+  + 9902 | Phim Việt | 53 chương trình
+  + 9903 | Phim Âu Mỹ | 14 chương trình
+  + 9934 | Hoạt hình | 76 chương trình
+  + 10008 | 360 Hoa Ngữ | 27 chương trình
+  + 10009 | 360 Hành động Châu Á | 26 chương trình
+  + 10010 | 360 K-Drama | 35 chương trình
+  + 10011 | 360 Hài -Tình cảm | 50 chương trình
+  + 10012 | 360 Phim Kinh điển | 19 chương trình
+  + 10013 | 360 Anime | 60 chương trình
+  + 10045 | 360 Thiếu Nhi | 151 chương trình
+  + 10055 | 360 Phim 4K | 14 chương trình
+  + 10014 | 360 C1 Châu Âu | 11 chương trình
+  + 10015 | 360 C2 Châu Âu | 14 chương trình
+  + 10016 | 360 C3 Châu Âu | 13 chương trình
+  + 10017 | 360 Thể Thao Châu Á | 13 chương trình
+  + 10018 | 360 Công Thức 1 | 27 chương trình
+  + 10019 | 360 Bundesliga | 13 chương trình
+  + 10020 | 360 Golf | 13 chương trình
+  + 10021 | 360 Tennis | 25 chương trình
+  + 271 | HBO | 15 chương trình
+  + 239 | Cinemax | 14 chương trình
+  + 273 | Warner TV | 27 chương trình
+  + 281 | AXN | 25 chương trình
+  + 159 | Cinema World | 14 chương trình
+  + 235 | DreamWorks | 59 chương trình
+  + 277 | Cartoon | 33 chương trình
+  + 163 | FashionTV | 49 chương trình
+  + 237 | Bloomberg | 31 chương trình
+  + 279 | Discovery Channel | 25 chương trình
+  + 275 | CNN | 33 chương trình
+  + 283 | ABC Australia | 25 chương trình
+  + 216 | Outdoor HD | 31 chương trình
+  + 112 | Channel News Asia | 43 chương trình
+  + 215 | AFN HD | 42 chương trình
+  + 99 | HGTV | 37 chương trình
+  + 213 | KBS World | 27 chương trình
+  + 109 | DW | 79 chương trình
+  + 106 | NHK | 82 chương trình
+  + 96 | France 24 | 97 chương trình
+  + 9852 | TV5 | 53 chương trình
+  + 9855 | CNBC | 36 chương trình
+  + 9856 | History HD | 27 chương trình
+  + 9901 | Kix | 16 chương trình
+  + 10007 | France 24 SD | 79 chương trình
+  + 111 | Arirang | 50 chương trình
+  + 214 | DaVinci HD | 88 chương trình
+  + 25 | Vĩnh Long 1 | 50 chương trình
+  + 26 | Vĩnh Long 2 | 41 chương trình
+  + 219 | Vĩnh Long 3 | 37 chương trình
+  + 220 | Vĩnh Long 4 | 46 chương trình
+  + 91 | Vĩnh Long 5 | 34 chương trình
+  + 190 | HTV1 | 51 chương trình
+  + 191 | HTV2 | 29 chương trình
+  + 192 | HTV3 | 54 chương trình
+  + 9 | HTV4 | 23 chương trình
+  + 194 | HTV9 HD | 50 chương trình
+  + 195 | HTV Thể Thao | 31 chương trình
+  + 11 | HTVC gia đình | 42 chương trình
+  + 12 | HTVC phụ Nữ | 50 chương trình
+  + 13 | HTVC thuần việt | 40 chương trình
+  + 15 | HTVC phim truyện HD | 19 chương trình
+  + 14 | HTVC ca nhạc | 27 chương trình
+  + 132 | HTVC+ Channel B | 49 chương trình
+  + 133 | HTVC du lịch & cuộc sống | 78 chương trình
+  + 151 | An Viên HD | 51 chương trình
+  + 9905 | FM90 | 40 chương trình
+  + 9906 | FM96 | 40 chương trình
+  + 10036 | VOH AM610 | 45 chương trình
+  + 10037 | VOH FM99 | 40 chương trình
+  + 10038 | VOH FM87 | 30 chương trình
+  + 10039 | VOH FM95 | 16 chương trình
+  + 10040 | VOH FM92 Radio | 38 chương trình
+  + 232 | SCTV6 | 33 chương trình
+  + 201 | SCTV2 - Today TV | 31 chương trình
+  + 174 | VTVcab 16 - On Football HD | 32 chương trình
+  + 173 | VTVcab 3 - On Sports | 26 chương trình
+  + 170 | VTVcab 18 - On Sports News | 22 chương trình
+  + 169 | VTVcab 23 - Golf Channel | 18 chương trình
+  + 183 | VTVcab 6 - On Sports + | 43 chương trình
+  + 180 | VTVcab 1 - Vie Giải Trí HD | 28 chương trình
+  + 175 | VTVcab 2 - Phim Việt HD | 28 chương trình
+  + 176 | VTVcab10 - On Cine HD | 31 chương trình
+  + 177 | VTVcab19 – Vie Dramas | 27 chương trình
+  + 178 | VTVcab 8 Bibi SD | 53 chương trình
+  + 179 | VTVcab 21- Cartoon Kids HD | 77 chương trình
+  + 181 | Vtvcab 4 – On Movies | 25 chương trình
+  + 182 | VTVcab 5 - E Channel HD | 39 chương trình
+  + 184 | VTVcab 12 - StyleTV HD | 33 chương trình
+  + 185 | VTVcab15 – On Music | 31 chương trình
+  + 186 | Vtvcab17 – Trending TV | 49 chương trình
+  + 187 | VTVcab 20 - V Family HD | 42 chương trình
+  + 188 | VTVcab 22 - Life TV HD | 81 chương trình
+  + 189 | VTVcab 9 - InfoTV HD | 52 chương trình
+  + 136 | O2TV | 49 chương trình
+  + 134 | Quảng Ninh 3 | 70 chương trình
+  + 33 | Hà Nội 1 | 72 chương trình
+  + 34 | Hà Nội 2 | 62 chương trình
+  + 35 | An Giang 2 | 42 chương trình
+  + 9838 | BTV6 | 72 chương trình
+  + 31 | YouTV | 53 chương trình
+  + 32 | HITV | 44 chương trình
+  + 39 | Bắc Ninh | 59 chương trình
+  + 45 | Lâm Đồng 2 | 45 chương trình
+  + 46 | Cà Mau | 53 chương trình
+  + 47 | Cần Thơ 1 | 47 chương trình
+  + 48 | Cao Bằng | 40 chương trình
+  + 49 | Đà Nẵng 1 | 61 chương trình
+  + 51 | Đắk Lắk | 51 chương trình
+  + 52 | Điện Biên | 61 chương trình
+  + 53 | Đồng Nai 1 | 63 chương trình
+  + 54 | Đồng Tháp 1 | 52 chương trình
+  + 55 | Gia Lai | 38 chương trình
+  + 58 | Hà Tĩnh | 55 chương trình
+  + 59 | Hải Phòng 3 | 34 chương trình
+  + 60 | Hải Phòng | 56 chương trình
+  + 61 | Cần Thơ 2 | 41 chương trình
+  + 63 | Huế | 37 chương trình
+  + 64 | Hưng Yên | 43 chương trình
+  + 65 | Khánh Hòa | 41 chương trình
+  + 66 | An Giang 1 | 41 chương trình
+  + 68 | Lai Châu | 53 chương trình
+  + 69 | Lâm Đồng 1 | 46 chương trình
+  + 70 | Lạng Sơn | 67 chương trình
+  + 71 | Lào Cai | 51 chương trình
+  + 72 | Tây Ninh 1 | 61 chương trình
+  + 74 | Nghệ An | 59 chương trình
+  + 75 | Ninh Bình | 43 chương trình
+  + 76 | Khánh Hòa 1 | 47 chương trình
+  + 77 | Phú Thọ | 78 chương trình
+  + 80 | Đà Nẵng 2 | 51 chương trình
+  + 81 | Quảng Ngãi | 48 chương trình
+  + 82 | Quảng Ninh 1 | 84 chương trình
+  + 83 | Quảng Trị | 38 chương trình
+  + 84 | Cần Thơ 3 | 31 chương trình
+  + 85 | Sơn La | 50 chương trình
+  + 88 | Thái Nguyên | 77 chương trình
+  + 89 | Thanh Hóa | 76 chương trình
+  + 90 | Đồng Tháp 2 | 36 chương trình
+  + 92 | Tuyên Quang | 63 chương trình
+  + 255 | Đồng Nai | 54 chương trình
+  + 9965 | Bóng chuyền | 2 chương trình
+
+CHI TIẾT KÊNH KHÔNG CÓ EPG:
+  - 9904 | TV360 | API không có schedules
+
+RUN_JSON_START
+{
+  "timestamp": "2026-08-22 22:53:52",
+  "channel_count": 174,
+  "channels": {
+    "193": "HTV7 HD",
+    "2": "VTV1 HD",
+    "20": "ANTV",
+    "19": "QPVN HD",
+    "110": "VTV5 HD",
+    "9951": "VIETNAM TODAY HD",
+    "3": "VTV2 HD",
+    "4": "VTV3 HD",
+    "108": "VTV4 HD",
+    "207": "VTV5 Tây Nguyên",
+    "157": "VTV5 Tây Nam Bộ",
+    "10043": "VTV6 HD",
+    "6": "VTV7 HD",
+    "115": "VTV8 HD",
+    "8": "VTV9 HD",
+    "98": "VTV10 HD",
+    "2554": "TV360+ 1",
+    "1": "TV360+ 2",
+    "148": "TV360+ 3",
+    "2458": "TV360+ 4",
+    "9867": "TV360+ 5",
+    "9868": "TV360+ 6",
+    "9869": "TV360+ 7",
+    "9870": "TV360+ 8",
+    "9887": "TV360+ 9",
+    "9957": "TV360+ 10",
+    "9958": "TV360+ 11",
+    "10001": "TV360+ 12",
+    "10022": "TV360+ 13",
+    "10023": "TV360+ 14",
+    "10024": "TV360+ 15",
+    "10049": "TV360+ 16",
+    "9904": "TV360",
+    "9902": "Phim Việt",
+    "9903": "Phim Âu Mỹ",
+    "9934": "Hoạt hình",
+    "10008": "360 Hoa Ngữ",
+    "10009": "360 Hành động Châu Á",
+    "10010": "360 K-Drama",
+    "10011": "360 Hài -Tình cảm",
+    "10012": "360 Phim Kinh điển",
+    "10013": "360 Anime",
+    "10045": "360 Thiếu Nhi",
+    "10055": "360 Phim 4K",
+    "10014": "360 C1 Châu Âu",
+    "10015": "360 C2 Châu Âu",
+    "10016": "360 C3 Châu Âu",
+    "10017": "360 Thể Thao Châu Á",
+    "10018": "360 Công Thức 1",
+    "10019": "360 Bundesliga",
+    "10020": "360 Golf",
+    "10021": "360 Tennis",
+    "271": "HBO",
+    "239": "Cinemax",
+    "273": "Warner TV",
+    "281": "AXN",
+    "159": "Cinema World",
+    "235": "DreamWorks",
+    "277": "Cartoon",
+    "163": "FashionTV",
+    "237": "Bloomberg",
+    "279": "Discovery Channel",
+    "275": "CNN",
+    "283": "ABC Australia",
+    "216": "Outdoor HD",
+    "112": "Channel News Asia",
+    "215": "AFN HD",
+    "99": "HGTV",
+    "213": "KBS World",
+    "109": "DW",
+    "106": "NHK",
+    "96": "France 24",
+    "9852": "TV5",
+    "9855": "CNBC",
+    "9856": "History HD",
+    "9901": "Kix",
+    "10007": "France 24 SD",
+    "111": "Arirang",
+    "214": "DaVinci HD",
+    "25": "Vĩnh Long 1",
+    "26": "Vĩnh Long 2",
+    "219": "Vĩnh Long 3",
+    "220": "Vĩnh Long 4",
+    "91": "Vĩnh Long 5",
+    "190": "HTV1",
+    "191": "HTV2",
+    "192": "HTV3",
+    "9": "HTV4",
+    "194": "HTV9 HD",
+    "195": "HTV Thể Thao",
+    "11": "HTVC gia đình",
+    "12": "HTVC phụ Nữ",
+    "13": "HTVC thuần việt",
+    "15": "HTVC phim truyện HD",
+    "14": "HTVC ca nhạc",
+    "132": "HTVC+ Channel B",
+    "133": "HTVC du lịch & cuộc sống",
+    "151": "An Viên HD",
+    "9905": "FM90",
+    "9906": "FM96",
+    "10036": "VOH AM610",
+    "10037": "VOH FM99",
+    "10038": "VOH FM87",
+    "10039": "VOH FM95",
+    "10040": "VOH FM92 Radio",
+    "232": "SCTV6",
+    "201": "SCTV2 - Today TV",
+    "174": "VTVcab 16 - On Football HD",
+    "173": "VTVcab 3 - On Sports",
+    "170": "VTVcab 18 - On Sports News",
+    "169": "VTVcab 23 - Golf Channel",
+    "183": "VTVcab 6 - On Sports +",
+    "180": "VTVcab 1 - Vie Giải Trí HD",
+    "175": "VTVcab 2 - Phim Việt HD",
+    "176": "VTVcab10 - On Cine HD",
+    "177": "VTVcab19 – Vie Dramas",
+    "178": "VTVcab 8 Bibi SD",
+    "179": "VTVcab 21- Cartoon Kids HD",
+    "181": "Vtvcab 4 – On Movies",
+    "182": "VTVcab 5 - E Channel HD",
+    "184": "VTVcab 12 - StyleTV HD",
+    "185": "VTVcab15 – On Music",
+    "186": "Vtvcab17 – Trending TV",
+    "187": "VTVcab 20 - V Family HD",
+    "188": "VTVcab 22 - Life TV HD",
+    "189": "VTVcab 9 - InfoTV HD",
+    "136": "O2TV",
+    "134": "Quảng Ninh 3",
+    "33": "Hà Nội 1",
+    "34": "Hà Nội 2",
+    "35": "An Giang 2",
+    "9838": "BTV6",
+    "31": "YouTV",
+    "32": "HITV",
+    "39": "Bắc Ninh",
+    "45": "Lâm Đồng 2",
+    "46": "Cà Mau",
+    "47": "Cần Thơ 1",
+    "48": "Cao Bằng",
+    "49": "Đà Nẵng 1",
+    "51": "Đắk Lắk",
+    "52": "Điện Biên",
+    "53": "Đồng Nai 1",
+    "54": "Đồng Tháp 1",
+    "55": "Gia Lai",
+    "58": "Hà Tĩnh",
+    "59": "Hải Phòng 3",
+    "60": "Hải Phòng",
+    "61": "Cần Thơ 2",
+    "63": "Huế",
+    "64": "Hưng Yên",
+    "65": "Khánh Hòa",
+    "66": "An Giang 1",
+    "68": "Lai Châu",
+    "69": "Lâm Đồng 1",
+    "70": "Lạng Sơn",
+    "71": "Lào Cai",
+    "72": "Tây Ninh 1",
+    "74": "Nghệ An",
+    "75": "Ninh Bình",
+    "76": "Khánh Hòa 1",
+    "77": "Phú Thọ",
+    "80": "Đà Nẵng 2",
+    "81": "Quảng Ngãi",
+    "82": "Quảng Ninh 1",
+    "83": "Quảng Trị",
+    "84": "Cần Thơ 3",
+    "85": "Sơn La",
+    "88": "Thái Nguyên",
+    "89": "Thanh Hóa",
+    "90": "Đồng Tháp 2",
+    "92": "Tuyên Quang",
+    "255": "Đồng Nai",
+    "9965": "Bóng chuyền"
+  },
+  "epg_channel_count": 173,
+  "no_epg_channel_count": 1,
+  "programme_count": 7007
+}
+RUN_JSON_END
+
+================================================================================
+TV360 - 2026-08-22 22:42:39
+================================================================================
+Số lượng kênh hiện tại: 174
 Số kênh có EPG: 0
 Số kênh không có EPG: 174
 
-CHI TIẾT KÊNH CÓ EPG:
-
-CHI TIẾT KÊNH KHÔNG CÓ EPG:
-  - 2 | VTV1 HD | Chưa có mapping trong sheet Tham chiếu
-  - 20 | ANTV | Chưa có mapping trong sheet Tham chiếu
-  - 19 | QPVN HD | Chưa có mapping trong sheet Tham chiếu
-  - 110 | VTV5 HD | Chưa có mapping trong sheet Tham chiếu
-  - 9951 | VIETNAM TODAY HD | Chưa có mapping trong sheet Tham chiếu
-  - 3 | VTV2 HD | Chưa có mapping trong sheet Tham chiếu
-  - 4 | VTV3 HD | Chưa có mapping trong sheet Tham chiếu
-  - 108 | VTV4 HD | Chưa có mapping trong sheet Tham chiếu
-  - 207 | VTV5 Tây Nguyên | Chưa có mapping trong sheet Tham chiếu
-  - 157 | VTV5 Tây Nam Bộ | Chưa có mapping trong sheet Tham chiếu
-  - 10043 | VTV6 HD | Chưa có mapping trong sheet Tham chiếu
-  - 6 | VTV7 HD | Chưa có mapping trong sheet Tham chiếu
-  - 115 | VTV8 HD | Chưa có mapping trong sheet Tham chiếu
-  - 8 | VTV9 HD | Chưa có mapping trong sheet Tham chiếu
-  - 98 | VTV10 HD | Chưa có mapping trong sheet Tham chiếu
-  - 2554 | TV360+ 1 | Chưa có mapping trong sheet Tham chiếu
-  - 1 | TV360+ 2 | Chưa có mapping trong sheet Tham chiếu
-  - 148 | TV360+ 3 | Chưa có mapping trong sheet Tham chiếu
-  - 2458 | TV360+ 4 | Chưa có mapping trong sheet Tham chiếu
-  - 9867 | TV360+ 5 | Chưa có mapping trong sheet Tham chiếu
-  - 9868 | TV360+ 6 | Chưa có mapping trong sheet Tham chiếu
-  - 9869 | TV360+ 7 | Chưa có mapping trong sheet Tham chiếu
-  - 9870 | TV360+ 8 | Chưa có mapping trong sheet Tham chiếu
-  - 9887 | TV360+ 9 | Chưa có mapping trong sheet Tham chiếu
-  - 9957 | TV360+ 10 | Chưa có mapping trong sheet Tham chiếu
-  - 9958 | TV360+ 11 | Chưa có mapping trong sheet Tham chiếu
-  - 10001 | TV360+ 12 | Chưa có mapping trong sheet Tham chiếu
-  - 10022 | TV360+ 13 | Chưa có mapping trong sheet Tham chiếu
-  - 10023 | TV360+ 14 | Chưa có mapping trong sheet Tham chiếu
-  - 10024 | TV360+ 15 | Chưa có mapping trong sheet Tham chiếu
-  - 10049 | TV360+ 16 | Chưa có mapping trong sheet Tham chiếu
-  - 9904 | TV360 | Chưa có mapping trong sheet Tham chiếu
-  - 9902 | Phim Việt | Chưa có mapping trong sheet Tham chiếu
-  - 9903 | Phim Âu Mỹ | Chưa có mapping trong sheet Tham chiếu
-  - 9934 | Hoạt hình | Chưa có mapping trong sheet Tham chiếu
-  - 10008 | 360 Hoa Ngữ | Chưa có mapping trong sheet Tham chiếu
-  - 10009 | 360 Hành động Châu Á | Chưa có mapping trong sheet Tham chiếu
-  - 10010 | 360 K-Drama | Chưa có mapping trong sheet Tham chiếu
-  - 10011 | 360 Hài -Tình cảm | Chưa có mapping trong sheet Tham chiếu
-  - 10012 | 360 Phim Kinh điển | Chưa có mapping trong sheet Tham chiếu
-  - 10013 | 360 Anime | Chưa có mapping trong sheet Tham chiếu
-  - 10045 | 360 Thiếu Nhi | Chưa có mapping trong sheet Tham chiếu
-  - 10055 | 360 Phim 4K | Chưa có mapping trong sheet Tham chiếu
-  - 10014 | 360 C1 Châu Âu | Chưa có mapping trong sheet Tham chiếu
-  - 10015 | 360 C2 Châu Âu | Chưa có mapping trong sheet Tham chiếu
-  - 10016 | 360 C3 Châu Âu | Chưa có mapping trong sheet Tham chiếu
-  - 10017 | 360 Thể Thao Châu Á | Chưa có mapping trong sheet Tham chiếu
-  - 10018 | 360 Công Thức 1 | Chưa có mapping trong sheet Tham chiếu
-  - 10019 | 360 Bundesliga | Chưa có mapping trong sheet Tham chiếu
-  - 10020 | 360 Golf | Chưa có mapping trong sheet Tham chiếu
-  - 10021 | 360 Tennis | Chưa có mapping trong sheet Tham chiếu
-  - 271 | HBO | Chưa có mapping trong sheet Tham chiếu
-  - 239 | Cinemax | Chưa có mapping trong sheet Tham chiếu
-  - 273 | Warner TV | Chưa có mapping trong sheet Tham chiếu
-  - 281 | AXN | Chưa có mapping trong sheet Tham chiếu
-  - 159 | Cinema World | Chưa có mapping trong sheet Tham chiếu
-  - 235 | DreamWorks | Chưa có mapping trong sheet Tham chiếu
-  - 277 | Cartoon | Chưa có mapping trong sheet Tham chiếu
-  - 163 | FashionTV | Chưa có mapping trong sheet Tham chiếu
-  - 237 | Bloomberg | Chưa có mapping trong sheet Tham chiếu
-  - 279 | Discovery Channel | Chưa có mapping trong sheet Tham chiếu
-  - 275 | CNN | Chưa có mapping trong sheet Tham chiếu
-  - 283 | ABC Australia | Chưa có mapping trong sheet Tham chiếu
-  - 216 | Outdoor HD | Chưa có mapping trong sheet Tham chiếu
-  - 112 | Channel News Asia | Chưa có mapping trong sheet Tham chiếu
-  - 215 | AFN HD | Chưa có mapping trong sheet Tham chiếu
-  - 99 | HGTV | Chưa có mapping trong sheet Tham chiếu
-  - 213 | KBS World | Chưa có mapping trong sheet Tham chiếu
-  - 109 | DW | Chưa có mapping trong sheet Tham chiếu
-  - 106 | NHK | Chưa có mapping trong sheet Tham chiếu
-  - 96 | France 24 | Chưa có mapping trong sheet Tham chiếu
-  - 9852 | TV5 | Chưa có mapping trong sheet Tham chiếu
-  - 9855 | CNBC | Chưa có mapping trong sheet Tham chiếu
-  - 9856 | History HD | Chưa có mapping trong sheet Tham chiếu
-  - 9901 | Kix | Chưa có mapping trong sheet Tham chiếu
-  - 10007 | France 24 SD | Chưa có mapping trong sheet Tham chiếu
-  - 111 | Arirang | Chưa có mapping trong sheet Tham chiếu
-  - 214 | DaVinci HD | Chưa có mapping trong sheet Tham chiếu
-  - 25 | Vĩnh Long 1 | Chưa có mapping trong sheet Tham chiếu
-  - 26 | Vĩnh Long 2 | Chưa có mapping trong sheet Tham chiếu
-  - 219 | Vĩnh Long 3 | Chưa có mapping trong sheet Tham chiếu
-  - 220 | Vĩnh Long 4 | Chưa có mapping trong sheet Tham chiếu
-  - 91 | Vĩnh Long 5 | Chưa có mapping trong sheet Tham chiếu
-  - 190 | HTV1 | Chưa có mapping trong sheet Tham chiếu
-  - 191 | HTV2 | Chưa có mapping trong sheet Tham chiếu
-  - 192 | HTV3 | Chưa có mapping trong sheet Tham chiếu
-  - 9 | HTV4 | Chưa có mapping trong sheet Tham chiếu
-  - 193 | HTV7 HD | Chưa có mapping trong sheet Tham chiếu
-  - 194 | HTV9 HD | Chưa có mapping trong sheet Tham chiếu
-  - 195 | HTV Thể Thao | Chưa có mapping trong sheet Tham chiếu
-  - 11 | HTVC gia đình | Chưa có mapping trong sheet Tham chiếu
-  - 12 | HTVC phụ Nữ | Chưa có mapping trong sheet Tham chiếu
-  - 13 | HTVC thuần việt | Chưa có mapping trong sheet Tham chiếu
-  - 15 | HTVC phim truyện HD | Chưa có mapping trong sheet Tham chiếu
-  - 14 | HTVC ca nhạc | Chưa có mapping trong sheet Tham chiếu
-  - 132 | HTVC+ Channel B | Chưa có mapping trong sheet Tham chiếu
-  - 133 | HTVC du lịch & cuộc sống | Chưa có mapping trong sheet Tham chiếu
-  - 151 | An Viên HD | Chưa có mapping trong sheet Tham chiếu
-  - 9905 | FM90 | Chưa có mapping trong sheet Tham chiếu
-  - 9906 | FM96 | Chưa có mapping trong sheet Tham chiếu
-  - 10036 | VOH AM610 | Chưa có mapping trong sheet Tham chiếu
-  - 10037 | VOH FM99 | Chưa có mapping trong sheet Tham chiếu
-  - 10038 | VOH FM87 | Chưa có mapping trong sheet Tham chiếu
-  - 10039 | VOH FM95 | Chưa có mapping trong sheet Tham chiếu
-  - 10040 | VOH FM92 Radio | Chưa có mapping trong sheet Tham chiếu
-  - 232 | SCTV6 | Chưa có mapping trong sheet Tham chiếu
-  - 201 | SCTV2 - Today TV | Chưa có mapping trong sheet Tham chiếu
-  - 174 | VTVcab 16 - On Football HD | Chưa có mapping trong sheet Tham chiếu
-  - 173 | VTVcab 3 - On Sports | Chưa có mapping trong sheet Tham chiếu
-  - 170 | VTVcab 18 - On Sports News | Chưa có mapping trong sheet Tham chiếu
-  - 169 | VTVcab 23 - Golf Channel | Chưa có mapping trong sheet Tham chiếu
-  - 183 | VTVcab 6 - On Sports + | Chưa có mapping trong sheet Tham chiếu
-  - 180 | VTVcab 1 - Vie Giải Trí HD | Chưa có mapping trong sheet Tham chiếu
-  - 175 | VTVcab 2 - Phim Việt HD | Chưa có mapping trong sheet Tham chiếu
-  - 176 | VTVcab10 - On Cine HD | Chưa có mapping trong sheet Tham chiếu
-  - 177 | VTVcab19 – Vie Dramas | Chưa có mapping trong sheet Tham chiếu
-  - 178 | VTVcab 8 Bibi SD | Chưa có mapping trong sheet Tham chiếu
-  - 179 | VTVcab 21- Cartoon Kids HD | Chưa có mapping trong sheet Tham chiếu
-  - 181 | Vtvcab 4 – On Movies | Chưa có mapping trong sheet Tham chiếu
-  - 182 | VTVcab 5 - E Channel HD | Chưa có mapping trong sheet Tham chiếu
-  - 184 | VTVcab 12 - StyleTV HD | Chưa có mapping trong sheet Tham chiếu
-  - 185 | VTVcab15 – On Music | Chưa có mapping trong sheet Tham chiếu
-  - 186 | Vtvcab17 – Trending TV | Chưa có mapping trong sheet Tham chiếu
-  - 187 | VTVcab 20 - V Family HD | Chưa có mapping trong sheet Tham chiếu
-  - 188 | VTVcab 22 - Life TV HD | Chưa có mapping trong sheet Tham chiếu
-  - 189 | VTVcab 9 - InfoTV HD | Chưa có mapping trong sheet Tham chiếu
-  - 136 | O2TV | Chưa có mapping trong sheet Tham chiếu
-  - 134 | Quảng Ninh 3 | Chưa có mapping trong sheet Tham chiếu
-  - 33 | Hà Nội 1 | Chưa có mapping trong sheet Tham chiếu
-  - 34 | Hà Nội 2 | Chưa có mapping trong sheet Tham chiếu
-  - 35 | An Giang 2 | Chưa có mapping trong sheet Tham chiếu
-  - 9838 | BTV6 | Chưa có mapping trong sheet Tham chiếu
-  - 31 | YouTV | Chưa có mapping trong sheet Tham chiếu
-  - 32 | HITV | Chưa có mapping trong sheet Tham chiếu
-  - 39 | Bắc Ninh | Chưa có mapping trong sheet Tham chiếu
-  - 45 | Lâm Đồng 2 | Chưa có mapping trong sheet Tham chiếu
-  - 46 | Cà Mau | Chưa có mapping trong sheet Tham chiếu
-  - 47 | Cần Thơ 1 | Chưa có mapping trong sheet Tham chiếu
-  - 48 | Cao Bằng | Chưa có mapping trong sheet Tham chiếu
-  - 49 | Đà Nẵng 1 | Chưa có mapping trong sheet Tham chiếu
-  - 51 | Đắk Lắk | Chưa có mapping trong sheet Tham chiếu
-  - 52 | Điện Biên | Chưa có mapping trong sheet Tham chiếu
-  - 53 | Đồng Nai 1 | Chưa có mapping trong sheet Tham chiếu
-  - 54 | Đồng Tháp 1 | Chưa có mapping trong sheet Tham chiếu
-  - 55 | Gia Lai | Chưa có mapping trong sheet Tham chiếu
-  - 58 | Hà Tĩnh | Chưa có mapping trong sheet Tham chiếu
-  - 59 | Hải Phòng 3 | Chưa có mapping trong sheet Tham chiếu
-  - 60 | Hải Phòng | Chưa có mapping trong sheet Tham chiếu
-  - 61 | Cần Thơ 2 | Chưa có mapping trong sheet Tham chiếu
-  - 63 | Huế | Chưa có mapping trong sheet Tham chiếu
-  - 64 | Hưng Yên | Chưa có mapping trong sheet Tham chiếu
-  - 65 | Khánh Hòa | Chưa có mapping trong sheet Tham chiếu
-  - 66 | An Giang 1 | Chưa có mapping trong sheet Tham chiếu
-  - 68 | Lai Châu | Chưa có mapping trong sheet Tham chiếu
-  - 69 | Lâm Đồng 1 | Chưa có mapping trong sheet Tham chiếu
-  - 70 | Lạng Sơn | Chưa có mapping trong sheet Tham chiếu
-  - 71 | Lào Cai | Chưa có mapping trong sheet Tham chiếu
-  - 72 | Tây Ninh 1 | Chưa có mapping trong sheet Tham chiếu
-  - 74 | Nghệ An | Chưa có mapping trong sheet Tham chiếu
-  - 75 | Ninh Bình | Chưa có mapping trong sheet Tham chiếu
-  - 76 | Khánh Hòa 1 | Chưa có mapping trong sheet Tham chiếu
-  - 77 | Phú Thọ | Chưa có mapping trong sheet Tham chiếu
-  - 80 | Đà Nẵng 2 | Chưa có mapping trong sheet Tham chiếu
-  - 81 | Quảng Ngãi | Chưa có mapping trong sheet Tham chiếu
-  - 82 | Quảng Ninh 1 | Chưa có mapping trong sheet Tham chiếu
-  - 83 | Quảng Trị | Chưa có mapping trong sheet Tham chiếu
-  - 84 | Cần Thơ 3 | Chưa có mapping trong sheet Tham chiếu
-  - 85 | Sơn La | Chưa có mapping trong sheet Tham chiếu
-  - 88 | Thái Nguyên | Chưa có mapping trong sheet Tham chiếu
-  - 89 | Thanh Hóa | Chưa có mapping trong sheet Tham chiếu
-  - 90 | Đồng Tháp 2 | Chưa có mapping trong sheet Tham chiếu
-  - 92 | Tuyên Quang | Chưa có mapping trong sheet Tham chiếu
-  - 255 | Đồng Nai | Chưa có mapping trong sheet Tham chiếu
-  - 9965 | Bóng chuyền | Chưa có mapping trong sheet Tham chiếu
+Dữ liệu chi tiết của lần chạy này được giữ trong JSON.
 
 RUN_JSON_START
 {
