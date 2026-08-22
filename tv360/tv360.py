@@ -3,36 +3,35 @@ import re
 import json
 import html
 import time
-import traceback
+import shutil
 from datetime import datetime, timedelta
-from urllib.parse import urljoin
+from pathlib import Path
+from collections import OrderedDict
 
 import requests
-from bs4 import BeautifulSoup
-from openpyxl import Workbook, load_workbook
-from openpyxl.styles import Font, Alignment
+from openpyxl import load_workbook
 
 
 # ============================================================
 # CONFIG
 # ============================================================
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = Path(__file__).resolve().parent
 
-EXCEL_FILE = os.path.join(BASE_DIR, "tv360channels.xlsx")
-XML_FILE = os.path.join(BASE_DIR, "tv360epg.xml")
-LOG_FILE = os.path.join(BASE_DIR, "tv360log.txt")
+EXCEL_FILE = BASE_DIR / "tv360channels.xlsx"
+EPG_FILE = BASE_DIR / "tv360epg.xml"
+LOG_FILE = BASE_DIR / "tv360log.txt"
 
-CHANNEL_PAGE = "https://m.tv360.vn/tv/"
-SCHEDULE_API = "https://m.tv360.vn/public/v1/live/get-live-schedule?id={}"
+DATA_SHEET = "Data"
+REFERENCE_SHEET = "Tham chiếu"
 
-SOURCE_INFO_NAME = "Ngân Phúc"
-SOURCE_INFO_URL = "https://epg.vercel.app/epg.xml"
-GENERATOR_INFO_NAME = "EPG GitHub"
-
-MAX_LOG_DAYS = 7
+CHANNEL_API_URL = "https://m.tv360.vn/tv/"
+EPG_API_URL = "https://m.tv360.vn/public/v1/live/get-live-schedule?id={}"
 
 REQUEST_TIMEOUT = 30
+REQUEST_DELAY = 0.2
+
+MAX_LOG_RUNS = 7
 
 HEADERS = {
     "User-Agent": (
@@ -40,45 +39,78 @@ HEADERS = {
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/151.0.0.0 Safari/537.36"
     ),
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept": "application/json,text/html,*/*",
     "Accept-Language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
-    "Referer": "https://m.tv360.vn/",
+    "Referer": "https://m.tv360.vn/tv/",
 }
 
 
 # ============================================================
-# UTILS
+# HTTP SESSION
 # ============================================================
 
-def log_print(message):
-    print(message, flush=True)
+session = requests.Session()
+session.headers.update(HEADERS)
+
+
+# ============================================================
+# UTILITY
+# ============================================================
+
+def now_vietnam():
+    """
+    Trả về thời gian Việt Nam.
+    GitHub runner thường chạy UTC nên không dùng datetime.now() đơn thuần.
+    """
+    from zoneinfo import ZoneInfo
+
+    return datetime.now(ZoneInfo("Asia/Ho_Chi_Minh"))
 
 
 def clean_text(value):
+    """
+    Chuẩn hóa text theo yêu cầu:
+
+    - Xóa khoảng trắng trước , :
+    - Thêm khoảng trắng sau , :
+    - Nếu , : ở cuối thì xóa
+    - Thêm khoảng trắng trước và sau -
+    - Xóa khoảng trắng kép
+    """
+
     if value is None:
         return ""
 
     value = str(value)
 
-    # HTML entities
+    # HTML entity nếu có
     value = html.unescape(value)
 
-    # Không xuống dòng
-    value = value.replace("\r", " ").replace("\n", " ").replace("\t", " ")
+    # --------------------------------------------------------
+    # Xử lý dấu , :
+    # --------------------------------------------------------
 
-    # Xóa khoảng trắng trước , :
+    # Xóa khoảng trắng trước dấu , :
     value = re.sub(r"\s+([,:])", r"\1", value)
 
+    # Nếu dấu , hoặc : nằm cuối chuỗi thì xóa
+    value = re.sub(r"[,:]\s*$", "", value)
+
     # Thêm khoảng trắng sau , :
+    # Chỉ khi phía sau có ký tự
     value = re.sub(r"([,:])(?=\S)", r"\1 ", value)
 
-    # Xóa dấu , hoặc : nếu ở cuối chuỗi
-    value = re.sub(r"([,:])\s*$", "", value)
+    # --------------------------------------------------------
+    # Xử lý dấu -
+    # --------------------------------------------------------
 
-    # Dấu -
+    # Xóa khoảng trắng xung quanh -
     value = re.sub(r"\s*-\s*", " - ", value)
 
-    # Loại bỏ khoảng trắng kép
+    # --------------------------------------------------------
+    # Xóa khoảng trắng kép
+    # --------------------------------------------------------
+
     value = re.sub(r"\s+", " ", value)
 
     return value.strip()
@@ -86,498 +118,412 @@ def clean_text(value):
 
 def xml_escape(value):
     """
-    Escape XML theo đúng yêu cầu:
-        &  -> &amp;
-        <  -> &lt;
-        >  -> &gt;
-        "  -> &quot;
-        '  -> &apos;
+    Escape XML.
+    Dùng html.escape để xử lý &, <, >, ".
+    Sau đó thay ' thành &apos;.
     """
 
-    if value is None:
-        return ""
+    value = clean_text(value)
 
-    value = str(value)
-
-    # Quan trọng: phải escape & trước
-    value = value.replace("&", "&amp;")
-    value = value.replace("<", "&lt;")
-    value = value.replace(">", "&gt;")
-    value = value.replace('"', "&quot;")
-    value = value.replace("'", "&apos;")
+    value = (
+        value
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&apos;")
+    )
 
     return value
 
 
-def normalize_xml_text(value):
-    return xml_escape(clean_text(value))
+def parse_time(time_string):
+    """
+    HH:MM
+    """
+
+    if not time_string:
+        return None
+
+    try:
+        return datetime.strptime(time_string, "%H:%M")
+    except Exception:
+        return None
+
+
+def calculate_duration(start_time, end_time):
+    """
+    Tính số phút từ startTime đến endTime.
+
+    Ví dụ:
+    00:00 -> 01:30 = 90
+    23:30 -> 00:15 = 45
+    """
+
+    start = parse_time(start_time)
+    end = parse_time(end_time)
+
+    if not start or not end:
+        return None
+
+    dummy_date = datetime(2000, 1, 1)
+
+    start = dummy_date.replace(
+        hour=start.hour,
+        minute=start.minute
+    )
+
+    end = dummy_date.replace(
+        hour=end.hour,
+        minute=end.minute
+    )
+
+    if end <= start:
+        end += timedelta(days=1)
+
+    minutes = int((end - start).total_seconds() / 60)
+
+    return minutes
+
+
+def format_xmltv_datetime(date_string, time_string):
+    """
+    2026-08-22 + 00:00
+    =>
+    20260822000000 +0700
+    """
+
+    if not date_string or not time_string:
+        return None
+
+    try:
+        dt = datetime.strptime(
+            f"{date_string} {time_string}",
+            "%Y-%m-%d %H:%M"
+        )
+
+        return dt.strftime("%Y%m%d%H%M%S") + " +0700"
+
+    except Exception:
+        return None
 
 
 # ============================================================
-# HTTP
+# FIND CHANNEL JSON
 # ============================================================
 
-session = requests.Session()
-session.headers.update(HEADERS)
+def extract_json_objects(text):
+    """
+    Tìm các object JSON trong HTML/text.
+
+    TV360 đôi khi trả HTML có embedded JSON.
+    Hàm này cố gắng tìm các object có:
+        id
+        slug
+        link
+    """
+
+    objects = []
+
+    decoder = json.JSONDecoder()
+
+    for match in re.finditer(r'\{', text):
+
+        start = match.start()
+
+        try:
+            obj, end = decoder.raw_decode(text[start:])
+
+            if isinstance(obj, dict):
+                objects.append(obj)
+
+        except Exception:
+            continue
+
+    return objects
 
 
-def get_response(url):
+def get_channels_from_tv360():
+    """
+    Lấy toàn bộ channel từ https://m.tv360.vn/tv/
+    """
+
+    print("Đang lấy danh sách kênh TV360...")
+
     response = session.get(
-        url,
+        CHANNEL_API_URL,
         timeout=REQUEST_TIMEOUT
     )
 
     response.raise_for_status()
 
-    return response
+    text = response.text
 
+    channels = OrderedDict()
 
-# ============================================================
-# CHANNEL SCRAPING
-# ============================================================
+    # --------------------------------------------------------
+    # Trường hợp response trực tiếp là JSON
+    # --------------------------------------------------------
 
-def recursive_find_channel_objects(obj, result=None):
-    """
-    Tìm các object có khả năng là channel trong JSON bất kể
-    cấu trúc JSON của TV360 thay đổi nhẹ.
+    try:
+        data = response.json()
 
-    Các field quan trọng:
-        id
-        name
-        slug
-        link
-        coverImage
-    """
+        candidate_objects = extract_channel_objects(data)
 
-    if result is None:
-        result = []
+        for obj in candidate_objects:
+            add_channel(channels, obj)
 
-    if isinstance(obj, dict):
+    except Exception:
+        pass
 
-        keys_lower = {
-            str(k).lower(): k
-            for k in obj.keys()
-        }
+    # --------------------------------------------------------
+    # Tìm embedded JSON trong HTML
+    # --------------------------------------------------------
 
-        id_key = None
-        name_key = None
+    if not channels:
+        objects = extract_json_objects(text)
 
-        for candidate in ["id", "channel_id", "channelid", "liveid"]:
-            if candidate in keys_lower:
-                id_key = keys_lower[candidate]
-                break
+        for obj in objects:
 
-        for candidate in ["name", "displayname", "display-name", "title"]:
-            if candidate in keys_lower:
-                name_key = keys_lower[candidate]
-                break
+            # Chính object
+            add_channel(channels, obj)
 
-        if id_key is not None and name_key is not None:
+            # Các key có thể chứa list
+            for value in obj.values():
 
-            channel_id = obj.get(id_key)
-            name = obj.get(name_key)
+                if isinstance(value, list):
 
-            if channel_id is not None and name:
+                    for item in value:
 
-                channel_id = str(channel_id).strip()
-                name = str(name).strip()
+                        if isinstance(item, dict):
+                            add_channel(channels, item)
 
-                # Tránh nhận nhầm object không phải channel
-                if channel_id and name:
+    # --------------------------------------------------------
+    # Kiểm tra
+    # --------------------------------------------------------
 
-                    result.append(obj)
+    if not channels:
+        raise RuntimeError(
+            "Không tìm thấy danh sách kênh TV360 từ "
+            f"{CHANNEL_API_URL}"
+        )
 
-        for value in obj.values():
-            recursive_find_channel_objects(value, result)
+    result = list(channels.values())
 
-    elif isinstance(obj, list):
-
-        for item in obj:
-            recursive_find_channel_objects(item, result)
+    print(f"Tìm thấy {len(result)} kênh.")
 
     return result
 
 
-def extract_channels_from_json_scripts(soup):
+def extract_channel_objects(data):
     """
-    Tìm JSON nằm trong các <script> của trang.
-    """
-
-    channels = []
-
-    for script in soup.find_all("script"):
-
-        content = script.string or script.get_text()
-
-        if not content:
-            continue
-
-        content = content.strip()
-
-        # Chỉ thử JSON nguyên khối
-        if content.startswith("{") or content.startswith("["):
-
-            try:
-                data = json.loads(content)
-
-                found = recursive_find_channel_objects(data)
-
-                channels.extend(found)
-
-            except Exception:
-                pass
-
-    return channels
-
-
-def extract_channels_from_html_links(soup):
-    """
-    Fallback:
-    tìm các link dạng /tv/xxx?ch=194
+    Tìm channel objects trong JSON response.
     """
 
-    channels = []
+    result = []
 
-    for a in soup.find_all("a", href=True):
+    def walk(obj):
 
-        href = a.get("href", "").strip()
+        if isinstance(obj, dict):
 
-        if not href:
-            continue
+            if (
+                "id" in obj
+                and "slug" in obj
+                and (
+                    "link" in obj
+                    or "coverImage" in obj
+                    or "horizontalImage" in obj
+                )
+            ):
+                result.append(obj)
 
-        full_url = urljoin(CHANNEL_PAGE, href)
+            for value in obj.values():
+                walk(value)
 
-        match = re.search(
-            r"(?:[?&]ch=)(\d+)",
-            full_url,
-            re.IGNORECASE
-        )
+        elif isinstance(obj, list):
 
-        if not match:
-            continue
+            for item in obj:
+                walk(item)
 
-        channel_id = match.group(1)
+    walk(data)
 
-        text = a.get_text(" ", strip=True)
-
-        if not text:
-            continue
-
-        channels.append({
-            "id": channel_id,
-            "name": text,
-            "slug": "",
-            "link": full_url,
-            "coverImage": "",
-        })
-
-    return channels
+    return result
 
 
-def extract_channels_from_html_regex(html_text):
+def add_channel(channels, obj):
     """
-    Fallback cuối cùng:
-    tìm URL TV360 dạng:
-
-        /tv/slug?ch=194
+    Thêm một channel nếu object đúng cấu trúc.
     """
 
-    channels = []
+    if not isinstance(obj, dict):
+        return
 
-    pattern = re.compile(
-        r'["\']([^"\']*/tv/([^"\']+?)(?:\?|\&)ch=(\d+)[^"\']*)["\']',
-        re.IGNORECASE
-    )
+    if "id" not in obj:
+        return
 
-    for match in pattern.finditer(html_text):
+    if "slug" not in obj:
+        return
 
-        link = match.group(1)
-        slug = match.group(2)
-        channel_id = match.group(3)
+    if "link" not in obj:
+        return
 
-        link = urljoin(CHANNEL_PAGE, link)
+    channel_id = str(obj.get("id", "")).strip()
 
-        channels.append({
-            "id": channel_id,
-            "name": slug.replace("-", " "),
-            "slug": slug,
-            "link": link,
-            "coverImage": "",
-        })
+    if not channel_id:
+        return
 
-    return channels
+    name = str(obj.get("name", "")).strip()
 
+    slug = str(obj.get("slug", "")).strip()
 
-def normalize_channel_object(obj):
-    """
-    Chuẩn hóa object API thành:
+    link = str(obj.get("link", "")).strip()
 
-        id
-        name
-        slug
-        link
-        coverImage
-    """
+    # Ưu tiên horizontalImage
+    horizontal_image = str(
+        obj.get("horizontalImage", "") or ""
+    ).strip()
 
-    def get_value(keys):
-        for key in keys:
+    # --------------------------------------------------------
+    # Một số response có name đúng.
+    # Nếu không có name thì tạo từ slug.
+    # --------------------------------------------------------
 
-            if key in obj:
-                value = obj.get(key)
+    if not name:
+        name = slug.replace("-", " ")
 
-                if value is not None:
-                    return value
-
-        return ""
-
-    channel_id = get_value([
-        "id",
-        "channel_id",
-        "channelId",
-        "liveId",
-    ])
-
-    name = get_value([
-        "name",
-        "displayName",
-        "display-name",
-        "title",
-    ])
-
-    slug = get_value([
-        "slug",
-        "channelSlug",
-    ])
-
-    link = get_value([
-        "link",
-        "url",
-        "href",
-    ])
-
-    cover = get_value([
-        "coverImage",
-        "cover_image",
-        "coverimage",
-        "horizontalImage",
-        "horizontal_image",
-    ])
-
-    if isinstance(channel_id, dict):
-        channel_id = channel_id.get("id", "")
-
-    channel_id = str(channel_id).strip()
-    name = str(name).strip()
-    slug = str(slug).strip()
-    link = str(link).strip()
-    cover = str(cover).strip()
-
-    if link:
-        link = urljoin(CHANNEL_PAGE, link)
-
-    if cover:
-        cover = urljoin(CHANNEL_PAGE, cover)
-
-    if not link and slug and channel_id:
-        link = f"https://tv360.vn/tv/{slug}?ch={channel_id}"
-
-    return {
+    channel = {
         "id": channel_id,
         "name": name,
         "slug": slug,
         "link": link,
-        "coverImage": cover,
+        "horizontalImage": horizontal_image,
     }
 
-
-def get_all_channels():
-    """
-    Lấy toàn bộ danh sách kênh TV360.
-
-    Vì cấu trúc frontend TV360 có thể thay đổi,
-    hàm này sử dụng nhiều lớp fallback.
-    """
-
-    log_print("Đang lấy danh sách kênh TV360...")
-
-    response = get_response(CHANNEL_PAGE)
-
-    html_text = response.text
-
-    soup = BeautifulSoup(html_text, "html.parser")
-
-    candidates = []
-
-    # --------------------------------------------------------
-    # 1. JSON trong script
-    # --------------------------------------------------------
-
-    candidates.extend(
-        extract_channels_from_json_scripts(soup)
-    )
-
-    # --------------------------------------------------------
-    # 2. Link HTML
-    # --------------------------------------------------------
-
-    candidates.extend(
-        extract_channels_from_html_links(soup)
-    )
-
-    # --------------------------------------------------------
-    # 3. Regex
-    # --------------------------------------------------------
-
-    candidates.extend(
-        extract_channels_from_html_regex(html_text)
-    )
-
-    channels = {}
-
-    for obj in candidates:
-
-        channel = normalize_channel_object(obj)
-
-        channel_id = channel["id"]
-
-        if not channel_id:
-            continue
-
-        # Tên phải có
-        if not channel["name"]:
-            continue
-
-        # Tránh trùng
-        channels[channel_id] = channel
-
-    result = list(channels.values())
-
-    result.sort(
-        key=lambda x: (
-            int(x["id"]) if x["id"].isdigit() else 999999999,
-            x["name"].lower()
-        )
-    )
-
-    log_print(
-        f"Tìm thấy {len(result)} kênh."
-    )
-
-    return result
+    channels[channel_id] = channel
 
 
 # ============================================================
 # EXCEL
 # ============================================================
 
-HEADERS_DATA = [
-    "id",
-    "name",
-    "slug",
-    "link",
-    "coverImage",
-    "channel",
-    "display-name",
-]
-
-
-def ensure_workbook():
+def ensure_excel_file():
     """
-    Nếu chưa có tv360channels.xlsx thì tạo mới.
-
-    Nếu đã có:
-        - giữ nguyên workbook
-        - giữ nguyên Tham chiếu
-        - giữ nguyên F:G
+    Kiểm tra tv360channels.xlsx.
     """
 
-    if os.path.exists(EXCEL_FILE):
-
-        wb = load_workbook(
-            EXCEL_FILE,
-            data_only=False
+    if not EXCEL_FILE.exists():
+        raise FileNotFoundError(
+            f"Không tìm thấy file:\n{EXCEL_FILE}\n\n"
+            "Hãy tạo tv360channels.xlsx và sheet "
+            "'Data' + 'Tham chiếu' trước."
         )
 
-    else:
 
-        wb = Workbook()
+def prepare_data_sheet(ws):
+    """
+    Đảm bảo header Data đúng.
+    """
 
-        ws = wb.active
-        ws.title = "Data"
+    headers = [
+        "id",
+        "name",
+        "slug",
+        "link",
+        "horizontalImage",
+        "channel",
+        "display-name",
+    ]
 
-        ws_ref = wb.create_sheet("Tham chiếu")
+    for col, header in enumerate(headers, start=1):
 
-        for col, header in enumerate(HEADERS_DATA, 1):
-
-            ws.cell(
-                row=1,
-                column=col,
-                value=header
-            )
-
-            ws_ref.cell(
-                row=1,
-                column=col,
-                value=header
-            )
-
-            ws.cell(
-                row=1,
-                column=col
-            ).font = Font(bold=True)
-
-            ws_ref.cell(
-                row=1,
-                column=col
-            ).font = Font(bold=True)
-
-        wb.save(EXCEL_FILE)
-
-    # --------------------------------------------------------
-    # Đảm bảo 2 sheet tồn tại
-    # --------------------------------------------------------
-
-    if "Data" not in wb.sheetnames:
-        ws = wb.create_sheet("Data")
-    else:
-        ws = wb["Data"]
-
-    if "Tham chiếu" not in wb.sheetnames:
-        ws_ref = wb.create_sheet("Tham chiếu")
-    else:
-        ws_ref = wb["Tham chiếu"]
-
-    # --------------------------------------------------------
-    # Đảm bảo header
-    # --------------------------------------------------------
-
-    for col, header in enumerate(HEADERS_DATA, 1):
-
+        # Chỉ đặt A:E nếu header chưa đúng.
+        # Không đụng F:G.
         if ws.cell(1, col).value is None:
             ws.cell(1, col).value = header
 
-        if ws_ref.cell(1, col).value is None:
-            ws_ref.cell(1, col).value = header
 
-    return wb, ws, ws_ref
-
-
-def read_reference_mapping(ws_ref):
+def update_data_sheet(wb, channels):
     """
-    Đọc mapping thủ công từ:
+    Cập nhật A:E.
 
-        Tham chiếu!A = id
-        Tham chiếu!F = channel
-        Tham chiếu!G = display-name
-
-    Đây mới là mapping được Python dùng để tạo XML.
+    Quan trọng:
+    - Không xóa F:G
+    - Không xóa công thức
+    - Không xóa dữ liệu cũ ở F:G
+    - Không đụng sheet Tham chiếu
     """
+
+    if DATA_SHEET not in wb.sheetnames:
+        ws = wb.create_sheet(DATA_SHEET)
+    else:
+        ws = wb[DATA_SHEET]
+
+    prepare_data_sheet(ws)
+
+    # --------------------------------------------------------
+    # Xóa dữ liệu A:E cũ.
+    # F:G hoàn toàn không đụng tới.
+    # --------------------------------------------------------
+
+    max_row = max(ws.max_row, len(channels) + 1)
+
+    for row in range(2, max_row + 1):
+
+        for col in range(1, 6):
+            ws.cell(row, col).value = None
+
+    # --------------------------------------------------------
+    # Ghi channel mới
+    # --------------------------------------------------------
+
+    for row_num, channel in enumerate(channels, start=2):
+
+        ws.cell(row_num, 1).value = channel["id"]
+        ws.cell(row_num, 2).value = channel["name"]
+        ws.cell(row_num, 3).value = channel["slug"]
+        ws.cell(row_num, 4).value = channel["link"]
+        ws.cell(row_num, 5).value = channel["horizontalImage"]
+
+    print(
+        f"Đã cập nhật Data A:E với {len(channels)} kênh."
+    )
+
+
+# ============================================================
+# REFERENCE
+# ============================================================
+
+def load_reference_mapping(wb):
+    """
+    Đọc mapping từ sheet 'Tham chiếu'.
+
+    Cấu trúc:
+    A = id
+    B = name
+    C = slug
+    D = link
+    E = horizontalImage
+    F = channel
+    G = display-name
+
+    Python KHÔNG dựa vào VLOOKUP.
+
+    Điều này rất quan trọng vì openpyxl không tự tính công thức.
+    """
+
+    if REFERENCE_SHEET not in wb.sheetnames:
+        raise RuntimeError(
+            f"Không tìm thấy sheet '{REFERENCE_SHEET}' "
+            "trong tv360channels.xlsx"
+        )
+
+    ws = wb[REFERENCE_SHEET]
 
     mapping = {}
 
-    for row in range(2, ws_ref.max_row + 1):
+    for row in range(2, ws.max_row + 1):
 
-        channel_id = ws_ref.cell(row, 1).value
+        channel_id = ws.cell(row, 1).value
 
         if channel_id is None:
             continue
@@ -587,801 +533,774 @@ def read_reference_mapping(ws_ref):
         if not channel_id:
             continue
 
-        channel = ws_ref.cell(row, 6).value
-        display_name = ws_ref.cell(row, 7).value
+        channel = ws.cell(row, 6).value
+        display_name = ws.cell(row, 7).value
 
-        channel = (
-            str(channel).strip()
-            if channel is not None
-            else ""
-        )
+        if channel is None or str(channel).strip() == "":
+            continue
 
-        display_name = (
-            str(display_name).strip()
-            if display_name is not None
-            else ""
-        )
+        if display_name is None or str(display_name).strip() == "":
+            continue
 
         mapping[channel_id] = {
-            "channel": channel,
-            "display-name": display_name,
+            "channel": str(channel).strip(),
+            "display-name": str(display_name).strip(),
         }
+
+    print(
+        f"Đã đọc {len(mapping)} mapping từ '{REFERENCE_SHEET}'."
+    )
 
     return mapping
 
 
-def write_channels_to_excel(wb, ws, channels):
-    """
-    Chỉ cập nhật A:E.
-
-    Tuyệt đối không xóa F:G.
-
-    Các dòng F:G cũ vẫn được giữ nguyên.
-    """
-
-    # --------------------------------------------------------
-    # Xóa dữ liệu cũ A:E
-    # --------------------------------------------------------
-
-    if ws.max_row >= 2:
-
-        for row in ws.iter_rows(
-            min_row=2,
-            max_row=ws.max_row,
-            min_col=1,
-            max_col=5
-        ):
-            for cell in row:
-                cell.value = None
-
-    # --------------------------------------------------------
-    # Ghi dữ liệu mới A:E
-    # --------------------------------------------------------
-
-    for row_index, channel in enumerate(channels, 2):
-
-        ws.cell(
-            row=row_index,
-            column=1,
-            value=channel["id"]
-        )
-
-        ws.cell(
-            row=row_index,
-            column=2,
-            value=channel["name"]
-        )
-
-        ws.cell(
-            row=row_index,
-            column=3,
-            value=channel["slug"]
-        )
-
-        ws.cell(
-            row=row_index,
-            column=4,
-            value=channel["link"]
-        )
-
-        ws.cell(
-            row=row_index,
-            column=5,
-            value=channel["coverImage"]
-        )
-
-    # --------------------------------------------------------
-    # Header
-    # --------------------------------------------------------
-
-    for col in range(1, 8):
-
-        ws.cell(
-            row=1,
-            column=col
-        ).font = Font(bold=True)
-
-        ws.cell(
-            row=1,
-            column=col
-        ).alignment = Alignment(
-            horizontal="center"
-        )
-
-    # --------------------------------------------------------
-    # Không tự động xóa F:G
-    #
-    # Chỉ đảm bảo formula nếu người dùng đã có formula.
-    #
-    # Nếu workbook mới hoàn toàn thì tạo VLOOKUP.
-    # --------------------------------------------------------
-
-    has_existing_formula = False
-
-    for row in range(2, min(ws.max_row, 20) + 1):
-
-        f = ws.cell(row, 6).value
-        g = ws.cell(row, 7).value
-
-        if (
-            isinstance(f, str)
-            and f.startswith("=")
-        ) or (
-            isinstance(g, str)
-            and g.startswith("=")
-        ):
-            has_existing_formula = True
-            break
-
-    # Workbook mới:
-    # tạo formula cho số dòng hiện tại + 20 dòng dự phòng.
-    if not has_existing_formula:
-
-        formula_end = max(
-            len(channels) + 20,
-            20
-        )
-
-        for row in range(2, formula_end + 1):
-
-            ws.cell(
-                row=row,
-                column=6,
-                value=(
-                    f'=IFERROR(VLOOKUP(A{row},'
-                    f"'Tham chiếu'!$A:$G,6,FALSE),\"\")"
-                )
-            )
-
-            ws.cell(
-                row=row,
-                column=7,
-                value=(
-                    f'=IFERROR(VLOOKUP(A{row},'
-                    f"'Tham chiếu'!$A:$G,7,FALSE),\"\")"
-                )
-            )
-
-    # --------------------------------------------------------
-    # Chiều rộng cột
-    # --------------------------------------------------------
-
-    widths = {
-        "A": 14,
-        "B": 35,
-        "C": 35,
-        "D": 60,
-        "E": 70,
-        "F": 20,
-        "G": 35,
-    }
-
-    for col, width in widths.items():
-        ws.column_dimensions[col].width = width
-
-    wb.save(EXCEL_FILE)
-
-
 # ============================================================
-# EPG
+# EPG API
 # ============================================================
 
-def get_epg_for_channel(channel_id):
+def get_channel_epg(channel_id):
     """
-    Lấy EPG cho một ID TV360.
+    Lấy EPG của một channel.
     """
 
-    url = SCHEDULE_API.format(channel_id)
+    url = EPG_API_URL.format(channel_id)
 
     try:
 
-        response = get_response(url)
+        response = session.get(
+            url,
+            timeout=REQUEST_TIMEOUT
+        )
+
+        response.raise_for_status()
 
         data = response.json()
 
-        schedules = (
-            data
-            .get("data", {})
-            .get("schedules", [])
-        )
+        # ----------------------------------------------------
+        # Tìm schedules ở nhiều cấu trúc JSON
+        # ----------------------------------------------------
 
-        if not isinstance(schedules, list):
+        schedules = find_schedules(data)
+
+        if not schedules:
             return []
 
         return schedules
 
-    except Exception as exc:
+    except Exception as e:
 
-        log_print(
-            f"  Lỗi EPG ID {channel_id}: {exc}"
+        print(
+            f"[EPG ERROR] id={channel_id}: {e}"
         )
-
-        return []
-
-
-def parse_datetime(date_str, time_str):
-    """
-    TV360:
-        datetime = 2026-08-22
-        startTime = 15:25
-
-    Output:
-        datetime object
-    """
-
-    try:
-
-        return datetime.strptime(
-            f"{date_str} {time_str}",
-            "%Y-%m-%d %H:%M"
-        )
-
-    except Exception:
 
         return None
 
 
-def format_xmltv_datetime(dt):
+def find_schedules(data):
     """
-    XMLTV:
-        YYYYMMDDHHMMSS +0700
-    """
-
-    return dt.strftime(
-        "%Y%m%d%H%M%S +0700"
-    )
-
-
-def duration_minutes(start_dt, end_dt):
-    """
-    Tính thời lượng phút.
-
-    Làm tròn lên nếu có giây lẻ.
+    Tìm key schedules trong JSON.
     """
 
-    seconds = (
-        end_dt - start_dt
-    ).total_seconds()
+    if isinstance(data, dict):
 
-    if seconds <= 0:
-        return 0
+        if isinstance(data.get("schedules"), list):
+            return data["schedules"]
 
-    return int(
-        (seconds + 59) // 60
-    )
+        for value in data.values():
 
+            result = find_schedules(value)
 
-def build_programme(
-    channel,
-    display_name,
-    schedule
-):
-    """
-    Tạo một programme XML.
-    """
+            if result:
+                return result
 
-    title = schedule.get("name", "")
+    elif isinstance(data, list):
 
-    date_str = schedule.get(
-        "datetime",
-        ""
-    )
+        for item in data:
 
-    start_time = schedule.get(
-        "startTime",
-        ""
-    )
+            result = find_schedules(item)
 
-    end_time = schedule.get(
-        "endTime",
-        ""
-    )
+            if result:
+                return result
 
-    start_dt = parse_datetime(
-        date_str,
-        start_time
-    )
-
-    end_dt = parse_datetime(
-        date_str,
-        end_time
-    )
-
-    if not start_dt or not end_dt:
-        return None
-
-    # Trường hợp chương trình qua 00:00
-    if end_dt <= start_dt:
-        end_dt += timedelta(days=1)
-
-    minutes = duration_minutes(
-        start_dt,
-        end_dt
-    )
-
-    title = normalize_xml_text(title)
-
-    return (
-        f'  <programme '
-        f'start="{format_xmltv_datetime(start_dt)}" '
-        f'stop="{format_xmltv_datetime(end_dt)}" '
-        f'channel="{xml_escape(channel)}">\n'
-        f'    <title lang="vi">{title}</title>\n'
-        f'    <length lang="vi">'
-        f'Chương trình này có thời lượng {minutes} phút'
-        f'</length>\n'
-        f'  </programme>\n'
-    )
+    return []
 
 
-def build_xml(
-    channels,
-    epg_data,
-    mapping
-):
-    """
-    Tạo toàn bộ tv360epg.xml.
+# ============================================================
+# GET EPG FOR ALL CHANNELS
+# ============================================================
 
-    mapping:
-        TV360 ID -> channel/display-name
+def collect_epg(channels, reference_mapping):
 
-    Chỉ những channel đã mapping mới được đưa vào XML.
-    """
+    programmes = []
 
-    lines = []
+    channels_with_epg = []
+    channels_without_epg = []
 
-    lines.append(
-        '<?xml version="1.0" encoding="UTF-8"?>'
-    )
+    today = now_vietnam().strftime("%Y-%m-%d")
 
-    lines.append(
-        f'<tv source-info-name="{xml_escape(SOURCE_INFO_NAME)}" '
-        f'source-info-url="{xml_escape(SOURCE_INFO_URL)}" '
-        f'generator-info-name="{xml_escape(GENERATOR_INFO_NAME)}">'
-    )
+    for index, channel in enumerate(channels, start=1):
 
-    # --------------------------------------------------------
-    # CHANNEL
-    # --------------------------------------------------------
+        channel_id = str(channel["id"])
 
-    valid_channels = []
-
-    for channel in channels:
-
-        channel_id = str(
-            channel["id"]
-        ).strip()
-
-        ref = mapping.get(channel_id)
-
-        if not ref:
-            continue
-
-        epg_channel = ref["channel"]
-        display_name = ref["display-name"]
-
-        if not epg_channel or not display_name:
-            continue
-
-        valid_channels.append({
-            "id": channel_id,
-            "channel": epg_channel,
-            "display-name": display_name,
-        })
-
-        lines.append(
-            f'  <channel id="{xml_escape(epg_channel)}">\n'
-            f'    <display-name lang="vi">'
-            f'{xml_escape(display_name)}'
-            f'</display-name>\n'
-            f'  </channel>'
+        print(
+            f"[{index}/{len(channels)}] "
+            f"{channel_id} - {channel['name']}"
         )
 
-    # --------------------------------------------------------
-    # PROGRAMME
-    # --------------------------------------------------------
+        # ----------------------------------------------------
+        # Chỉ lấy EPG cho channel có mapping.
+        # ----------------------------------------------------
 
-    for item in valid_channels:
+        if channel_id not in reference_mapping:
 
-        channel_id = item["id"]
+            print(
+                "  -> Chưa có mapping trong Tham chiếu."
+            )
 
-        epg_channel = item["channel"]
+            channels_without_epg.append({
+                "id": channel_id,
+                "name": channel["name"],
+                "reason": "Chưa có mapping trong sheet Tham chiếu",
+            })
 
-        display_name = item["display-name"]
+            continue
 
-        schedules = epg_data.get(
-            channel_id,
-            []
-        )
+        mapping = reference_mapping[channel_id]
+
+        schedules = get_channel_epg(channel_id)
+
+        if schedules is None:
+
+            channels_without_epg.append({
+                "id": channel_id,
+                "name": channel["name"],
+                "reason": "Lỗi khi gọi API EPG",
+            })
+
+            continue
+
+        if len(schedules) == 0:
+
+            channels_without_epg.append({
+                "id": channel_id,
+                "name": channel["name"],
+                "reason": "API không có schedules",
+            })
+
+            continue
+
+        valid_count = 0
 
         for schedule in schedules:
 
-            programme = build_programme(
-                epg_channel,
-                display_name,
-                schedule
+            if not isinstance(schedule, dict):
+                continue
+
+            name = schedule.get("name", "")
+            start_time = schedule.get("startTime", "")
+            end_time = schedule.get("endTime", "")
+
+            # ------------------------------------------------
+            # Date
+            # ------------------------------------------------
+
+            date_string = (
+                schedule.get("datetime")
+                or schedule.get("date")
+                or today
             )
 
-            if programme:
-                lines.append(programme.rstrip("\n"))
+            # date có thể là "Hôm nay"
+            if date_string == "Hôm nay":
+                date_string = today
 
-    lines.append("</tv>")
+            # ------------------------------------------------
+            # Kiểm tra dữ liệu
+            # ------------------------------------------------
 
-    return "\n".join(lines) + "\n"
+            if not name:
+                continue
+
+            if not start_time or not end_time:
+                continue
+
+            start_xml = format_xmltv_datetime(
+                date_string,
+                start_time
+            )
+
+            stop_xml = format_xmltv_datetime(
+                date_string,
+                end_time
+            )
+
+            if not start_xml or not stop_xml:
+                continue
+
+            duration = calculate_duration(
+                start_time,
+                end_time
+            )
+
+            if duration is None:
+                continue
+
+            programmes.append({
+                "channel": mapping["channel"],
+                "display-name": mapping["display-name"],
+                "start": start_xml,
+                "stop": stop_xml,
+                "title": clean_text(name),
+                "duration": duration,
+            })
+
+            valid_count += 1
+
+        if valid_count > 0:
+
+            channels_with_epg.append({
+                "id": channel_id,
+                "name": channel["name"],
+                "programmes": valid_count,
+            })
+
+        else:
+
+            channels_without_epg.append({
+                "id": channel_id,
+                "name": channel["name"],
+                "reason": "Có schedules nhưng không có dữ liệu hợp lệ",
+            })
+
+        time.sleep(REQUEST_DELAY)
+
+    return (
+        programmes,
+        channels_with_epg,
+        channels_without_epg
+    )
+
+
+# ============================================================
+# XML
+# ============================================================
+
+def create_epg_xml(
+    channels,
+    reference_mapping,
+    programmes
+):
+
+    print("Đang tạo tv360epg.xml...")
+
+    # --------------------------------------------------------
+    # Chỉ tạo channel XML cho những channel có mapping.
+    # --------------------------------------------------------
+
+    xml_lines = []
+
+    xml_lines.append(
+        '<?xml version="1.0" encoding="UTF-8"?>'
+    )
+
+    xml_lines.append(
+        '<tv source-info-name="Ngân Phúc" '
+        'source-info-url="https://epg.vercel.app/epg.xml" '
+        'generator-info-name="EPG GitHub">'
+    )
+
+    # --------------------------------------------------------
+    # Channel
+    # --------------------------------------------------------
+
+    added_channels = set()
+
+    for channel in channels:
+
+        channel_id = str(channel["id"])
+
+        if channel_id not in reference_mapping:
+            continue
+
+        mapping = reference_mapping[channel_id]
+
+        xml_channel = mapping["channel"]
+
+        if xml_channel in added_channels:
+            continue
+
+        added_channels.add(xml_channel)
+
+        display_name = xml_escape(
+            mapping["display-name"]
+        )
+
+        xml_lines.append(
+            f'  <channel id="{xml_escape(xml_channel)}">'
+        )
+
+        xml_lines.append(
+            f'    <display-name lang="vi">'
+            f'{display_name}'
+            f'</display-name>'
+        )
+
+        xml_lines.append(
+            '  </channel>'
+        )
+
+    # --------------------------------------------------------
+    # Programme
+    # --------------------------------------------------------
+
+    programmes_sorted = sorted(
+        programmes,
+        key=lambda x: (
+            x["channel"],
+            x["start"]
+        )
+    )
+
+    for program in programmes_sorted:
+
+        channel_id = xml_escape(
+            program["channel"]
+        )
+
+        start = program["start"]
+        stop = program["stop"]
+
+        title = xml_escape(
+            program["title"]
+        )
+
+        duration = program["duration"]
+
+        xml_lines.append(
+            f'  <programme '
+            f'start="{start}" '
+            f'stop="{stop}" '
+            f'channel="{channel_id}">'
+        )
+
+        xml_lines.append(
+            f'    <title lang="vi">'
+            f'{title}'
+            f'</title>'
+        )
+
+        xml_lines.append(
+            f'    <length lang="vi">'
+            f'Chương trình này có thời lượng '
+            f'{duration} phút'
+            f'</length>'
+        )
+
+        xml_lines.append(
+            '  </programme>'
+        )
+
+    xml_lines.append('</tv>')
+
+    # --------------------------------------------------------
+    # Ghi UTF-8
+    # --------------------------------------------------------
+
+    with open(
+        EPG_FILE,
+        "w",
+        encoding="utf-8",
+        newline="\n"
+    ) as f:
+
+        f.write("\n".join(xml_lines))
+
+    print(
+        f"Đã tạo {EPG_FILE}"
+    )
+
+    return len(programmes)
 
 
 # ============================================================
 # LOG
 # ============================================================
 
-def load_previous_log_data():
+def load_previous_log():
     """
-    Đọc trạng thái chạy trước từ một file JSON riêng.
+    Đọc log cũ.
 
-    File này nằm trong tv360/:
-        tv360_state.json
-
-    File này không phải log hiển thị cho người dùng.
+    Log được lưu theo dạng JSON block để Python dễ so sánh
+    với lần chạy trước.
     """
 
-    state_file = os.path.join(
-        BASE_DIR,
-        "tv360_state.json"
-    )
-
-    if not os.path.exists(state_file):
-        return {
-            "channels": []
-        }
+    if not LOG_FILE.exists():
+        return []
 
     try:
 
-        with open(
-            state_file,
-            "r",
+        text = LOG_FILE.read_text(
             encoding="utf-8"
-        ) as f:
+        )
 
-            return json.load(f)
+        blocks = []
+
+        # ----------------------------------------------------
+        # Mỗi run bắt đầu bằng:
+        # ====================================================
+        # RUN_JSON_START
+        # {...}
+        # RUN_JSON_END
+        # ----------------------------------------------------
+
+        pattern = re.compile(
+            r"RUN_JSON_START\s*"
+            r"(.*?)"
+            r"\s*RUN_JSON_END",
+            re.DOTALL
+        )
+
+        for match in pattern.finditer(text):
+
+            try:
+
+                data = json.loads(
+                    match.group(1)
+                )
+
+                blocks.append(data)
+
+            except Exception:
+                continue
+
+        return blocks
 
     except Exception:
-
-        return {
-            "channels": []
-        }
+        return []
 
 
-def save_current_state(channels):
-    state_file = os.path.join(
-        BASE_DIR,
-        "tv360_state.json"
-    )
-
-    state = {
-        "channels": [
-            {
-                "id": str(c["id"]),
-                "name": c["name"],
-            }
-            for c in channels
-        ]
-    }
-
-    with open(
-        state_file,
-        "w",
-        encoding="utf-8"
-    ) as f:
-
-        json.dump(
-            state,
-            f,
-            ensure_ascii=False,
-            indent=2
-        )
-
-
-def update_log(
-    channels,
-    epg_data,
-    mapping
+def build_log(
+    current_channels,
+    channels_with_epg,
+    channels_without_epg
 ):
-    """
-    Ghi log mới lên đầu.
 
-    Giữ tối đa 7 bản ghi.
-    """
+    previous_runs = load_previous_log()
 
-    now = datetime.now()
+    previous = (
+        previous_runs[0]
+        if previous_runs
+        else None
+    )
 
-    current_channels = {
-        str(c["id"]): c["name"]
-        for c in channels
-    }
+    current_map = OrderedDict()
 
-    previous_state = load_previous_log_data()
+    for channel in current_channels:
 
-    previous_channels = {
-        str(c["id"]): c["name"]
-        for c in previous_state.get(
+        current_map[
+            str(channel["id"])
+        ] = channel["name"]
+
+    previous_map = {}
+
+    if previous:
+
+        previous_map = previous.get(
             "channels",
-            []
+            {}
         )
-    }
 
-    current_ids = set(
-        current_channels.keys()
-    )
-
-    previous_ids = set(
-        previous_channels.keys()
-    )
+    current_ids = set(current_map)
+    previous_ids = set(previous_map)
 
     new_ids = current_ids - previous_ids
-
     removed_ids = previous_ids - current_ids
 
-    # --------------------------------------------------------
-    # EPG
-    # --------------------------------------------------------
-
-    epg_channels = []
-
-    no_epg_channels = []
-
-    for channel in channels:
-
-        channel_id = str(
-            channel["id"]
+    new_channels = [
+        {
+            "id": channel_id,
+            "name": current_map[channel_id]
+        }
+        for channel_id in sorted(
+            new_ids,
+            key=lambda x: int(x)
+            if x.isdigit()
+            else x
         )
+    ]
 
-        schedules = epg_data.get(
-            channel_id,
-            []
+    removed_channels = [
+        {
+            "id": channel_id,
+            "name": previous_map[channel_id]
+        }
+        for channel_id in sorted(
+            removed_ids,
+            key=lambda x: int(x)
+            if x.isdigit()
+            else x
         )
+    ]
 
-        if schedules:
-            epg_channels.append(channel)
-        else:
-            no_epg_channels.append(channel)
+    current_count = len(current_channels)
 
-    # --------------------------------------------------------
-    # Mapping
-    # --------------------------------------------------------
+    previous_count = (
+        len(previous_map)
+        if previous
+        else 0
+    )
 
-    mapped = 0
-    unmapped = []
-
-    for channel in channels:
-
-        channel_id = str(
-            channel["id"]
-        )
-
-        ref = mapping.get(channel_id)
-
-        if (
-            ref
-            and ref.get("channel")
-            and ref.get("display-name")
-        ):
-            mapped += 1
-        else:
-            unmapped.append(channel)
+    difference = (
+        current_count - previous_count
+    )
 
     # --------------------------------------------------------
-    # Log entry
+    # JSON data dùng cho lần chạy tiếp theo
+    # --------------------------------------------------------
+
+    json_data = {
+        "timestamp": now_vietnam().strftime(
+            "%Y-%m-%d %H:%M:%S"
+        ),
+        "channel_count": current_count,
+        "channels": dict(current_map),
+        "epg_channel_count": len(
+            channels_with_epg
+        ),
+        "no_epg_channel_count": len(
+            channels_without_epg
+        ),
+    }
+
+    # --------------------------------------------------------
+    # Text log
     # --------------------------------------------------------
 
     lines = []
 
     lines.append(
-        "=" * 70
+        "=" * 80
     )
 
     lines.append(
-        f"TV360 LOG - {now.strftime('%Y-%m-%d %H:%M:%S')}"
+        f"TV360 - {json_data['timestamp']}"
     )
 
     lines.append(
-        "=" * 70
+        "=" * 80
     )
 
     lines.append(
-        f"Số lượng kênh hiện tại : {len(channels)}"
+        f"Số lượng kênh hiện tại: {current_count}"
     )
 
-    difference = (
-        len(channels)
-        - len(previous_channels)
-    )
+    if previous:
+        sign = "+" if difference > 0 else ""
 
-    if difference > 0:
-        diff_text = f"+{difference}"
+        lines.append(
+            f"Chênh lệch so với lần chạy trước: "
+            f"{sign}{difference}"
+        )
 
     else:
-        diff_text = str(difference)
 
-    lines.append(
-        f"Chênh lệch so với lần trước : {diff_text}"
-    )
-
-    lines.append("")
+        lines.append(
+            "Chênh lệch so với lần chạy trước: "
+            "Chưa có dữ liệu"
+        )
 
     # --------------------------------------------------------
     # Kênh mới
     # --------------------------------------------------------
 
+    lines.append("")
     lines.append(
-        f"Kênh mới : {len(new_ids)}"
+        f"KÊNH MỚI ({len(new_channels)}):"
     )
 
-    if new_ids:
+    if new_channels:
 
-        for channel_id in sorted(
-            new_ids,
-            key=lambda x: (
-                int(x)
-                if x.isdigit()
-                else 999999999
-            )
-        ):
+        for item in new_channels:
 
             lines.append(
-                f"  + {channel_id} - "
-                f"{current_channels[channel_id]}"
+                f"  + {item['id']} | {item['name']}"
             )
 
     else:
-        lines.append("  Không có")
 
-    lines.append("")
+        lines.append("  Không có.")
 
     # --------------------------------------------------------
     # Kênh mất
     # --------------------------------------------------------
 
+    lines.append("")
     lines.append(
-        f"Kênh không còn : {len(removed_ids)}"
+        f"KÊNH KHÔNG CÒN ({len(removed_channels)}):"
     )
 
-    if removed_ids:
+    if removed_channels:
 
-        for channel_id in sorted(
-            removed_ids,
-            key=lambda x: (
-                int(x)
-                if x.isdigit()
-                else 999999999
-            )
-        ):
+        for item in removed_channels:
 
             lines.append(
-                f"  - {channel_id} - "
-                f"{previous_channels[channel_id]}"
+                f"  - {item['id']} | {item['name']}"
             )
 
     else:
-        lines.append("  Không có")
 
-    lines.append("")
+        lines.append("  Không có.")
 
     # --------------------------------------------------------
     # EPG
     # --------------------------------------------------------
 
+    lines.append("")
     lines.append(
-        f"Kênh có EPG : {len(epg_channels)}"
+        f"Số kênh có EPG: "
+        f"{len(channels_with_epg)}"
     )
 
     lines.append(
-        f"Kênh không có EPG : {len(no_epg_channels)}"
+        f"Số kênh không có EPG: "
+        f"{len(channels_without_epg)}"
     )
 
-    if no_epg_channels:
-
-        for channel in no_epg_channels:
-
-            lines.append(
-                f"  ! {channel['id']} - "
-                f"{channel['name']}"
-            )
-
-    else:
-
-        lines.append("  Không có")
+    # --------------------------------------------------------
+    # Chi tiết EPG
+    # --------------------------------------------------------
 
     lines.append("")
-
-    # --------------------------------------------------------
-    # Mapping
-    # --------------------------------------------------------
-
     lines.append(
-        f"Kênh đã mapping : {mapped}"
+        "CHI TIẾT KÊNH CÓ EPG:"
     )
 
-    lines.append(
-        f"Kênh chưa mapping : {len(unmapped)}"
-    )
+    for item in channels_with_epg:
 
-    if unmapped:
-
-        for channel in unmapped:
-
-            lines.append(
-                f"  ? {channel['id']} - "
-                f"{channel['name']}"
-            )
-
-    else:
-
-        lines.append("  Không có")
-
-    lines.append("")
-
-    # --------------------------------------------------------
-    # Đọc log cũ
-    # --------------------------------------------------------
-
-    old_entries = []
-
-    if os.path.exists(LOG_FILE):
-
-        with open(
-            LOG_FILE,
-            "r",
-            encoding="utf-8"
-        ) as f:
-
-            old_text = f.read()
-
-        # Mỗi entry bắt đầu bằng 70 dấu =
-        parts = old_text.split(
-            "=" * 70
+        lines.append(
+            f"  + {item['id']} | "
+            f"{item['name']} | "
+            f"{item['programmes']} chương trình"
         )
 
-        for part in parts:
+    # --------------------------------------------------------
+    # Không có EPG
+    # --------------------------------------------------------
 
-            part = part.strip()
+    lines.append("")
+    lines.append(
+        "CHI TIẾT KÊNH KHÔNG CÓ EPG:"
+    )
 
-            if part:
-                old_entries.append(
-                    part
-                )
+    if channels_without_epg:
 
-    new_entry = "\n".join(lines)
+        for item in channels_without_epg:
 
-    entries = [
-        new_entry
-    ] + old_entries
+            lines.append(
+                f"  - {item['id']} | "
+                f"{item['name']} | "
+                f"{item['reason']}"
+            )
 
-    entries = entries[:MAX_LOG_DAYS]
+    else:
 
-    with open(
-        LOG_FILE,
-        "w",
+        lines.append("  Không có.")
+
+    return (
+        "\n".join(lines),
+        json_data
+    )
+
+
+def save_log(log_text, json_data):
+    """
+    Lưu tối đa 7 lần chạy.
+
+    Lần mới nhất nằm trên cùng.
+    """
+
+    previous_runs = load_previous_log()
+
+    runs = [
+        json_data
+    ] + previous_runs
+
+    runs = runs[:MAX_LOG_RUNS]
+
+    # --------------------------------------------------------
+    # Chúng ta lưu cả text + JSON.
+    # --------------------------------------------------------
+
+    # Text của run hiện tại đã được tạo ở build_log.
+    # Các run cũ sẽ được phục dựng tối giản từ JSON.
+
+    blocks = []
+
+    # Current
+    blocks.append(
+        log_text
+        + "\n\n"
+        + "RUN_JSON_START\n"
+        + json.dumps(
+            json_data,
+            ensure_ascii=False,
+            indent=2
+        )
+        + "\nRUN_JSON_END"
+    )
+
+    # Old runs
+    for old in runs[1:]:
+
+        timestamp = old.get(
+            "timestamp",
+            ""
+        )
+
+        count = old.get(
+            "channel_count",
+            0
+        )
+
+        epg_count = old.get(
+            "epg_channel_count",
+            0
+        )
+
+        no_epg = old.get(
+            "no_epg_channel_count",
+            0
+        )
+
+        old_text = "\n".join([
+            "=" * 80,
+            f"TV360 - {timestamp}",
+            "=" * 80,
+            f"Số lượng kênh hiện tại: {count}",
+            f"Số kênh có EPG: {epg_count}",
+            f"Số kênh không có EPG: {no_epg}",
+            "",
+            "Dữ liệu chi tiết của lần chạy này được giữ trong JSON.",
+            "",
+            "RUN_JSON_START",
+            json.dumps(
+                old,
+                ensure_ascii=False,
+                indent=2
+            ),
+            "RUN_JSON_END",
+        ])
+
+        blocks.append(old_text)
+
+    LOG_FILE.write_text(
+        "\n\n".join(blocks),
         encoding="utf-8"
-    ) as f:
+    )
 
-        f.write(
-            (
-                "\n\n"
-                + "=" * 70
-                + "\n\n"
-            ).join(entries)
-        )
-
-    return {
-        "current": len(channels),
-        "difference": difference,
-        "new": len(new_ids),
-        "removed": len(removed_ids),
-        "epg": len(epg_channels),
-        "no_epg": len(no_epg_channels),
-        "mapped": mapped,
-        "unmapped": len(unmapped),
-    }
+    print(
+        f"Đã cập nhật log: {LOG_FILE}"
+    )
 
 
 # ============================================================
@@ -1390,194 +1309,149 @@ def update_log(
 
 def main():
 
-    start_time = time.time()
+    start = time.time()
 
-    log_print("=" * 70)
-    log_print("TV360 EPG START")
-    log_print("=" * 70)
+    print("=" * 70)
+    print("TV360 EPG")
+    print("=" * 70)
 
-    # --------------------------------------------------------
-    # 1. Lấy danh sách kênh
-    # --------------------------------------------------------
-
-    channels = get_all_channels()
-
-    if not channels:
-
-        raise RuntimeError(
-            "Không lấy được danh sách kênh TV360."
-        )
-
-    # --------------------------------------------------------
-    # 2. Excel
-    # --------------------------------------------------------
-
-    wb, ws, ws_ref = ensure_workbook()
-
-    # Đọc mapping trước khi ghi Data
-    mapping = read_reference_mapping(
-        ws_ref
+    print(
+        f"Excel: {EXCEL_FILE}"
     )
 
-    # Chỉ cập nhật A:E
-    write_channels_to_excel(
+    # --------------------------------------------------------
+    # 1. Kiểm tra Excel
+    # --------------------------------------------------------
+
+    ensure_excel_file()
+
+    # --------------------------------------------------------
+    # 2. Lấy danh sách TV360
+    # --------------------------------------------------------
+
+    channels = get_channels_from_tv360()
+
+    # --------------------------------------------------------
+    # 3. Mở Excel
+    # --------------------------------------------------------
+
+    print(
+        "Đang mở tv360channels.xlsx..."
+    )
+
+    wb = load_workbook(
+        EXCEL_FILE,
+        data_only=False
+    )
+
+    # --------------------------------------------------------
+    # 4. Cập nhật Data A:E
+    # --------------------------------------------------------
+
+    update_data_sheet(
         wb,
-        ws,
-        channels
-    )
-
-    log_print(
-        "Đã cập nhật Data!A:E."
-    )
-
-    log_print(
-        "Data!F:G được giữ nguyên."
-    )
-
-    # --------------------------------------------------------
-    # 3. EPG
-    # --------------------------------------------------------
-
-    epg_data = {}
-
-    total = len(channels)
-
-    log_print(
-        f"Bắt đầu lấy EPG cho {total} kênh..."
-    )
-
-    for index, channel in enumerate(
-        channels,
-        1
-    ):
-
-        channel_id = str(
-            channel["id"]
-        )
-
-        log_print(
-            f"[{index}/{total}] "
-            f"{channel_id} - "
-            f"{channel['name']}"
-        )
-
-        schedules = get_epg_for_channel(
-            channel_id
-        )
-
-        epg_data[channel_id] = schedules
-
-        log_print(
-            f"    EPG: {len(schedules)} chương trình"
-        )
-
-        # Tránh request quá nhanh
-        time.sleep(0.15)
-
-    # --------------------------------------------------------
-    # 4. XML
-    # --------------------------------------------------------
-
-    xml = build_xml(
-        channels,
-        epg_data,
-        mapping
-    )
-
-    with open(
-        XML_FILE,
-        "w",
-        encoding="utf-8",
-        newline="\n"
-    ) as f:
-
-        f.write(xml)
-
-    log_print(
-        f"Đã tạo: {XML_FILE}"
-    )
-
-    # --------------------------------------------------------
-    # 5. LOG
-    # --------------------------------------------------------
-
-    stats = update_log(
-        channels,
-        epg_data,
-        mapping
-    )
-
-    # --------------------------------------------------------
-    # 6. State
-    # --------------------------------------------------------
-
-    save_current_state(
         channels
     )
 
     # --------------------------------------------------------
-    # DONE
+    # 5. Đọc mapping từ Tham chiếu
     # --------------------------------------------------------
 
-    elapsed = time.time() - start_time
-
-    log_print("")
-    log_print("=" * 70)
-    log_print("TV360 EPG HOÀN TẤT")
-    log_print("=" * 70)
-
-    log_print(
-        f"Kênh hiện tại : {stats['current']}"
+    reference_mapping = load_reference_mapping(
+        wb
     )
 
-    log_print(
-        f"Chênh lệch    : {stats['difference']:+d}"
+    # --------------------------------------------------------
+    # 6. Lưu Excel
+    # --------------------------------------------------------
+
+    wb.save(EXCEL_FILE)
+
+    print(
+        "Đã lưu tv360channels.xlsx."
     )
 
-    log_print(
-        f"Kênh mới      : {stats['new']}"
+    # --------------------------------------------------------
+    # 7. Lấy EPG
+    # --------------------------------------------------------
+
+    (
+        programmes,
+        channels_with_epg,
+        channels_without_epg
+    ) = collect_epg(
+        channels,
+        reference_mapping
     )
 
-    log_print(
-        f"Kênh mất       : {stats['removed']}"
+    # --------------------------------------------------------
+    # 8. Tạo XML
+    # --------------------------------------------------------
+
+    programme_count = create_epg_xml(
+        channels,
+        reference_mapping,
+        programmes
     )
 
-    log_print(
-        f"Có EPG        : {stats['epg']}"
+    # --------------------------------------------------------
+    # 9. Log
+    # --------------------------------------------------------
+
+    log_text, json_data = build_log(
+        channels,
+        channels_with_epg,
+        channels_without_epg
     )
 
-    log_print(
-        f"Không có EPG  : {stats['no_epg']}"
+    json_data["programme_count"] = programme_count
+
+    save_log(
+        log_text,
+        json_data
     )
 
-    log_print(
-        f"Đã mapping     : {stats['mapped']}"
+    # --------------------------------------------------------
+    # 10. Summary
+    # --------------------------------------------------------
+
+    elapsed = time.time() - start
+
+    print("")
+    print("=" * 70)
+    print("HOÀN TẤT")
+    print("=" * 70)
+
+    print(
+        f"Số kênh: {len(channels)}"
     )
 
-    log_print(
-        f"Chưa mapping   : {stats['unmapped']}"
+    print(
+        f"Kênh có EPG: "
+        f"{len(channels_with_epg)}"
     )
 
-    log_print(
-        f"Thời gian      : {elapsed:.1f} giây"
+    print(
+        f"Kênh không có EPG: "
+        f"{len(channels_without_epg)}"
     )
 
-    log_print("=" * 70)
+    print(
+        f"Số chương trình: {programme_count}"
+    )
+
+    print(
+        f"Thời gian chạy: {elapsed:.2f} giây"
+    )
+
+    print(
+        f"XML: {EPG_FILE}"
+    )
+
+    print(
+        f"Log: {LOG_FILE}"
+    )
 
 
 if __name__ == "__main__":
-
-    try:
-
-        main()
-
-    except Exception as exc:
-
-        print("")
-        print("=" * 70)
-        print("TV360 ERROR")
-        print("=" * 70)
-        print(str(exc))
-        traceback.print_exc()
-
-        raise
+    main()
