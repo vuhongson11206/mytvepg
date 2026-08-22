@@ -1,1 +1,403 @@
+======================================================================
+TV360 LOG - 2026-08-22 12:55:57
+======================================================================
+Số lượng kênh hiện tại : 187
+Chênh lệch so với lần trước : +187
 
+Kênh mới : 187
+  + 0 - Tất cả
+  + 1 - tv360 2
+  + 2 - vtv1 hd
+  + 3 - vtv2 hd
+  + 4 - vtv3 hd
+  + 5 - Danh mục
+  + 6 - vtv7 hd
+  + 7 - Kênh địa phương
+  + 8 - vtv9 hd
+  + 9 - htv4
+  + 11 - htvc gia dinh
+  + 12 - htvc phu nu
+  + 13 - htvc thuan viet
+  + 14 - htvc ca nhac
+  + 15 - htvc phim truyen hd
+  + 19 - qpvn hd
+  + 20 - antv
+  + 25 - vinh long 1
+  + 26 - vinh long 2
+  + 31 - youtv
+  + 32 - hitv
+  + 33 - ha noi 1
+  + 34 - ha noi 2
+  + 35 - an giang 2
+  + 39 - bac ninh
+  + 45 - lam dong 2
+  + 46 - ca mau
+  + 47 - can tho 1
+  + 48 - cao bang
+  + 49 - da nang 1
+  + 51 - dak lak
+  + 52 - dien bien
+  + 53 - dong nai 1
+  + 54 - dong thap 1
+  + 55 - gia lai
+  + 58 - ha tinh
+  + 59 - hai phong 3
+  + 60 - hai phong
+  + 61 - can tho 2
+  + 63 - hue
+  + 64 - hung yen
+  + 65 - khanh hoa
+  + 66 - an giang 1
+  + 68 - lai chau
+  + 69 - lam dong 1
+  + 70 - lang son
+  + 71 - lao cai
+  + 72 - tay ninh 1
+  + 74 - nghe an
+  + 75 - ninh binh
+  + 76 - khanh hoa 1
+  + 77 - phu tho
+  + 80 - da nang 2
+  + 81 - quang ngai
+  + 82 - quang ninh 1
+  + 83 - quang tri
+  + 84 - can tho 3
+  + 85 - son la
+  + 88 - thai nguyen
+  + 89 - thanh hoa
+  + 90 - dong thap 2
+  + 91 - vinh long 5
+  + 92 - tuyen quang
+  + 96 - france 24
+  + 98 - vtv10 hd
+  + 99 - hgtv
+  + 106 - nhk
+  + 108 - vtv4 hd
+  + 109 - dw
+  + 110 - vtv5 hd
+  + 111 - arirang
+  + 112 - channel news asia
+  + 115 - vtv8 hd
+  + 132 - htvc
+  + 133 - htvc du lich cuoc song
+  + 134 - quang ninh 3
+  + 136 - o2tv
+  + 148 - tv360 3
+  + 151 - an vien hd
+  + 157 - vtv5 tay nam bo
+  + 159 - cinema world
+  + 163 - fashiontv
+  + 169 - vtvcab 23 golf channel
+  + 170 - vtvcab 18 on sports news
+  + 173 - vtvcab 3 on sports
+  + 174 - vtvcab 16 hd
+  + 175 - vtvcab 2 phim viet hd
+  + 176 - vtvcab10 on cine hd
+  + 177 - vtvcab19 vie dramas
+  + 178 - vtvcab 8 bi bi sd
+  + 179 - vtvcab 21 cartoon kids hd
+  + 180 - vtvcab 1 vie giai tri hd
+  + 181 - vtvcab 4 on movies
+  + 182 - vtvcab 5 e channel hd
+  + 183 - vtvcab 6 on sports
+  + 184 - vtvcab 12 styletv hd
+  + 185 - vtvcab15 on music
+  + 186 - vtvcab17 trending tv
+  + 187 - vtvcab 20 v family hd
+  + 188 - vtvcab 22 life tv hd
+  + 189 - vtvcab 9 infotv hd
+  + 190 - htv1
+  + 191 - htv2
+  + 192 - htv3
+  + 193 - htv7 hd
+  + 194 - htv9 hd
+  + 195 - htv the thao
+  + 201 - sctv2 today tv
+  + 207 - vtv5 tay nguyen
+  + 213 - kbs world
+  + 214 - davinci hd
+  + 215 - afn hd
+  + 216 - outdoor hd
+  + 219 - vinh long 3
+  + 220 - vinh long 4
+  + 232 - sctv6
+  + 235 - dreamworks
+  + 237 - bloomberg
+  + 239 - cinemax
+  + 255 - dong nai
+  + 271 - hbo
+  + 273 - warner tv
+  + 275 - cnn
+  + 277 - cartoon
+  + 279 - discovery channel
+  + 281 - axn
+  + 283 - abc australia
+  + 2458 - tv360 4
+  + 2554 - tv360 1
+  + 9838 - btv6
+  + 9852 - tv5
+  + 9855 - cnbc
+  + 9856 - history hd
+  + 9867 - tv360 5
+  + 9868 - tv360 6
+  + 9869 - tv360 7
+  + 9870 - tv360 8
+  + 9887 - tv360 9
+  + 9901 - kix
+  + 9902 - phim viet
+  + 9903 - phim au my
+  + 9904 - tv360
+  + 9905 - fm90
+  + 9906 - fm96
+  + 9934 - hoat hinh
+  + 9951 - vietnam today hd
+  + 9957 - tv360 10
+  + 9958 - tv360 11
+  + 9965 - bong chuyen
+  + 10001 - tv360 12
+  + 10007 - france 24 sd
+  + 10008 - 360 hoa ngu
+  + 10009 - 360 hanh dong chau a
+  + 10010 - 360 k drama
+  + 10011 - 360 hai tinh cam
+  + 10012 - 360 phim kinh dien
+  + 10013 - 360 anime
+  + 10014 - 360 c1 chau au
+  + 10015 - 360 c2 chau au
+  + 10016 - 360 c3 chau au
+  + 10017 - 360 the thao chau a
+  + 10018 - 360 cong thuc 1
+  + 10019 - 360 bundesliga
+  + 10020 - 360 golf
+  + 10021 - 360 tennis
+  + 10022 - tv360 13
+  + 10023 - tv360 14
+  + 10024 - tv360 15
+  + 10036 - voh am610
+  + 10037 - voh fm99
+  + 10038 - voh fm87
+  + 10039 - voh fm95
+  + 10040 - voh fm92 radio
+  + 10043 - vtv6 hd
+  + 10045 - 360 thieu nhi
+  + 10049 - tv360 16
+  + 10055 - 360 phim 4k
+  + 7808454 - Kênh thiết yếu
+  + 7808461 - Sự kiện trực tiếp
+  + 7808462 - Kênh Vĩnh Long
+  + 7808470 - Kênh FM
+  + 7808476 - Giải trí
+  + 7808479 - Thể thao
+  + -2 - Miễn phí
+  + recommend_live - Yêu thích
+  + live_stream - Kenh dang phat
+  + tab_live - menu tab
+
+Kênh không còn : 0
+  Không có
+
+Kênh có EPG : 174
+Kênh không có EPG : 13
+  ! 0 - Tất cả
+  ! 5 - Danh mục
+  ! 9904 - tv360
+  ! 7808454 - Kênh thiết yếu
+  ! 7808461 - Sự kiện trực tiếp
+  ! 7808462 - Kênh Vĩnh Long
+  ! 7808470 - Kênh FM
+  ! 7808476 - Giải trí
+  ! 7808479 - Thể thao
+  ! live_stream - Kenh dang phat
+  ! tab_live - menu tab
+  ! -2 - Miễn phí
+  ! recommend_live - Yêu thích
+
+Kênh đã mapping : 0
+Kênh chưa mapping : 187
+  ? 0 - Tất cả
+  ? 1 - tv360 2
+  ? 2 - vtv1 hd
+  ? 3 - vtv2 hd
+  ? 4 - vtv3 hd
+  ? 5 - Danh mục
+  ? 6 - vtv7 hd
+  ? 7 - Kênh địa phương
+  ? 8 - vtv9 hd
+  ? 9 - htv4
+  ? 11 - htvc gia dinh
+  ? 12 - htvc phu nu
+  ? 13 - htvc thuan viet
+  ? 14 - htvc ca nhac
+  ? 15 - htvc phim truyen hd
+  ? 19 - qpvn hd
+  ? 20 - antv
+  ? 25 - vinh long 1
+  ? 26 - vinh long 2
+  ? 31 - youtv
+  ? 32 - hitv
+  ? 33 - ha noi 1
+  ? 34 - ha noi 2
+  ? 35 - an giang 2
+  ? 39 - bac ninh
+  ? 45 - lam dong 2
+  ? 46 - ca mau
+  ? 47 - can tho 1
+  ? 48 - cao bang
+  ? 49 - da nang 1
+  ? 51 - dak lak
+  ? 52 - dien bien
+  ? 53 - dong nai 1
+  ? 54 - dong thap 1
+  ? 55 - gia lai
+  ? 58 - ha tinh
+  ? 59 - hai phong 3
+  ? 60 - hai phong
+  ? 61 - can tho 2
+  ? 63 - hue
+  ? 64 - hung yen
+  ? 65 - khanh hoa
+  ? 66 - an giang 1
+  ? 68 - lai chau
+  ? 69 - lam dong 1
+  ? 70 - lang son
+  ? 71 - lao cai
+  ? 72 - tay ninh 1
+  ? 74 - nghe an
+  ? 75 - ninh binh
+  ? 76 - khanh hoa 1
+  ? 77 - phu tho
+  ? 80 - da nang 2
+  ? 81 - quang ngai
+  ? 82 - quang ninh 1
+  ? 83 - quang tri
+  ? 84 - can tho 3
+  ? 85 - son la
+  ? 88 - thai nguyen
+  ? 89 - thanh hoa
+  ? 90 - dong thap 2
+  ? 91 - vinh long 5
+  ? 92 - tuyen quang
+  ? 96 - france 24
+  ? 98 - vtv10 hd
+  ? 99 - hgtv
+  ? 106 - nhk
+  ? 108 - vtv4 hd
+  ? 109 - dw
+  ? 110 - vtv5 hd
+  ? 111 - arirang
+  ? 112 - channel news asia
+  ? 115 - vtv8 hd
+  ? 132 - htvc
+  ? 133 - htvc du lich cuoc song
+  ? 134 - quang ninh 3
+  ? 136 - o2tv
+  ? 148 - tv360 3
+  ? 151 - an vien hd
+  ? 157 - vtv5 tay nam bo
+  ? 159 - cinema world
+  ? 163 - fashiontv
+  ? 169 - vtvcab 23 golf channel
+  ? 170 - vtvcab 18 on sports news
+  ? 173 - vtvcab 3 on sports
+  ? 174 - vtvcab 16 hd
+  ? 175 - vtvcab 2 phim viet hd
+  ? 176 - vtvcab10 on cine hd
+  ? 177 - vtvcab19 vie dramas
+  ? 178 - vtvcab 8 bi bi sd
+  ? 179 - vtvcab 21 cartoon kids hd
+  ? 180 - vtvcab 1 vie giai tri hd
+  ? 181 - vtvcab 4 on movies
+  ? 182 - vtvcab 5 e channel hd
+  ? 183 - vtvcab 6 on sports
+  ? 184 - vtvcab 12 styletv hd
+  ? 185 - vtvcab15 on music
+  ? 186 - vtvcab17 trending tv
+  ? 187 - vtvcab 20 v family hd
+  ? 188 - vtvcab 22 life tv hd
+  ? 189 - vtvcab 9 infotv hd
+  ? 190 - htv1
+  ? 191 - htv2
+  ? 192 - htv3
+  ? 193 - htv7 hd
+  ? 194 - htv9 hd
+  ? 195 - htv the thao
+  ? 201 - sctv2 today tv
+  ? 207 - vtv5 tay nguyen
+  ? 213 - kbs world
+  ? 214 - davinci hd
+  ? 215 - afn hd
+  ? 216 - outdoor hd
+  ? 219 - vinh long 3
+  ? 220 - vinh long 4
+  ? 232 - sctv6
+  ? 235 - dreamworks
+  ? 237 - bloomberg
+  ? 239 - cinemax
+  ? 255 - dong nai
+  ? 271 - hbo
+  ? 273 - warner tv
+  ? 275 - cnn
+  ? 277 - cartoon
+  ? 279 - discovery channel
+  ? 281 - axn
+  ? 283 - abc australia
+  ? 2458 - tv360 4
+  ? 2554 - tv360 1
+  ? 9838 - btv6
+  ? 9852 - tv5
+  ? 9855 - cnbc
+  ? 9856 - history hd
+  ? 9867 - tv360 5
+  ? 9868 - tv360 6
+  ? 9869 - tv360 7
+  ? 9870 - tv360 8
+  ? 9887 - tv360 9
+  ? 9901 - kix
+  ? 9902 - phim viet
+  ? 9903 - phim au my
+  ? 9904 - tv360
+  ? 9905 - fm90
+  ? 9906 - fm96
+  ? 9934 - hoat hinh
+  ? 9951 - vietnam today hd
+  ? 9957 - tv360 10
+  ? 9958 - tv360 11
+  ? 9965 - bong chuyen
+  ? 10001 - tv360 12
+  ? 10007 - france 24 sd
+  ? 10008 - 360 hoa ngu
+  ? 10009 - 360 hanh dong chau a
+  ? 10010 - 360 k drama
+  ? 10011 - 360 hai tinh cam
+  ? 10012 - 360 phim kinh dien
+  ? 10013 - 360 anime
+  ? 10014 - 360 c1 chau au
+  ? 10015 - 360 c2 chau au
+  ? 10016 - 360 c3 chau au
+  ? 10017 - 360 the thao chau a
+  ? 10018 - 360 cong thuc 1
+  ? 10019 - 360 bundesliga
+  ? 10020 - 360 golf
+  ? 10021 - 360 tennis
+  ? 10022 - tv360 13
+  ? 10023 - tv360 14
+  ? 10024 - tv360 15
+  ? 10036 - voh am610
+  ? 10037 - voh fm99
+  ? 10038 - voh fm87
+  ? 10039 - voh fm95
+  ? 10040 - voh fm92 radio
+  ? 10043 - vtv6 hd
+  ? 10045 - 360 thieu nhi
+  ? 10049 - tv360 16
+  ? 10055 - 360 phim 4k
+  ? 7808454 - Kênh thiết yếu
+  ? 7808461 - Sự kiện trực tiếp
+  ? 7808462 - Kênh Vĩnh Long
+  ? 7808470 - Kênh FM
+  ? 7808476 - Giải trí
+  ? 7808479 - Thể thao
+  ? live_stream - Kenh dang phat
+  ? tab_live - menu tab
+  ? -2 - Miễn phí
+  ? recommend_live - Yêu thích
